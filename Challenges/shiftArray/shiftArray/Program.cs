@@ -10,5 +10,10 @@ namespace shiftArray
 
             Console.ReadLine();
         }
+
+        static void ArrayShift()
+        {
+            Console.WriteLine("Hello World!");
+        }
     }
 }
