@@ -21,7 +21,10 @@ namespace shiftArray
 
         static int[] InsertShiftArray(int[] array, int toBeAdded)
         {
-            return array;
+            int[] solutionArray = new int[array.Length + 1];
+            int middleIndex = solutionArray.Length / 2;
+
+            return solutionArray;
         }
 
 
