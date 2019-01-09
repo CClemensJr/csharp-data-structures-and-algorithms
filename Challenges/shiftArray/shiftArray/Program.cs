@@ -6,7 +6,12 @@ namespace shiftArray
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ArrayShift();
+        }
+
+        static void ArrayShift()
+        {
+            Console.WriteLine("Will call insertShiftArray here");
         }
     }
 }
