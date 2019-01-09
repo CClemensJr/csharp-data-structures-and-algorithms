@@ -2,4 +2,4 @@
 
 ## Table of Contents
 
-1. [Challenge: Shift an Array](https://github.com/CClemensJr/data-structures-and-algorithms)
+1. [Challenge: Shift an Array](https://github.com/CClemensJr/data-structures-and-algorithms/Challenges/shiftArray)
