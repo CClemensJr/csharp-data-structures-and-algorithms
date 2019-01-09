@@ -13,7 +13,12 @@ namespace shiftArray
 
         static void ArrayShift()
         {
-            InsertShiftArray(int[] array, int toBeAdded);
+            int[] array = { 2, 6, 4, 8 };
+            int toBeAdded = 5;
+
+            InsertShiftArray(array, toBeAdded);
         }
+
+
     }
 }
