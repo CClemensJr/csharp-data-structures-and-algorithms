@@ -36,6 +36,7 @@ namespace shiftArray
                 if (i < middleIndex) { solutionArray[i] = inputArray[i]; }
                 if (i > middleIndex) { solutionArray[i] = inputArray[i - 1]; }
                 if (i == middleIndex) { solutionArray[i] = toBeAdded; }
+
             }
 
             return solutionArray;
