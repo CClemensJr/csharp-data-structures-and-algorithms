@@ -13,7 +13,7 @@ namespace shiftArray
 
         static void ArrayShift()
         {
-            Console.WriteLine("Hello World!");
+            InsertShiftArray(int[] array, int toBeAdded);
         }
     }
 }
