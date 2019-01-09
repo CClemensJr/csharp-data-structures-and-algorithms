@@ -24,6 +24,11 @@ namespace shiftArray
             int[] solutionArray = new int[array.Length + 1];
             int middleIndex = solutionArray.Length / 2;
 
+            for (int i = 0; i < solutionArray.Length; i++)
+            {
+
+            }
+
             return solutionArray;
         }
 
