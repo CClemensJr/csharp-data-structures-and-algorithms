@@ -16,7 +16,12 @@ namespace shiftArray
             int[] array = { 2, 6, 4, 8 };
             int toBeAdded = 5;
 
-            InsertShiftArray(array, toBeAdded);
+            InsertShiftArray(array, toBeAdded).ToString();
+        }
+
+        static int[] InsertShiftArray(int[] array, int toBeAdded)
+        {
+            return array;
         }
 
 
