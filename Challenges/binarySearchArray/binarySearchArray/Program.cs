@@ -7,7 +7,7 @@ namespace binarySearchArray
         static void Main(string[] args)
         {
             int[] arrayToBeSearched = { 4, 8, 15, 16, 23, 42 };
-            int searchKey = 2;
+            int searchKey = 42;
 
             BinarySearch(arrayToBeSearched, searchKey);
         }
