@@ -10,19 +10,50 @@ namespace binarySearchArray
             int searchKey = 42;
 
             BinarySearch(arrayToBeSearched, searchKey);
+
+            Console.ReadLine();
         }
 
         public static int BinarySearch(int[] array, int searchKey)
         {
-            int middleIndex = array.Length / 2;
+            int midPoint = array.Length / 2 - 1;
+            int leftBound = array[0];
+            int rightBound = array[array.Length - 1];
             int searches = array.Length;
+            int searchKeyIndex = midPoint;
 
-            //while (array[middleIndex] != searchKey || searches != 0)
-            //{
-            //    middleIndex
-            //}
+            try
+            {
+                while (searches != 0)
+                {
+                    if (searchKey > array[midPoint])
+                    {
+                        leftBound = midPoint + 1;
+                        midPoint += midPoint / 2;
 
-            return middleIndex;
+                        searches /= 2;
+                    }
+                    else if (searchKey < array[midPoint])
+                    {
+                        rightBound = midPoint - 1;
+                        midPoint -= midPoint / 2;
+
+                        searches /= 2;
+                    }
+                    else if (searchKey == array[midPoint])
+                    {
+                        searchKeyIndex = midPoint;
+
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("The formula was incorrect.");
+            }
+
+            return searchKeyIndex;
         }
     }
 }
