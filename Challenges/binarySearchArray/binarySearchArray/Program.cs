@@ -14,9 +14,15 @@ namespace binarySearchArray
 
         public static int BinarySearch(int[] array, int searchKey)
         {
-            Console.WriteLine("Hello World!");
+            int middleIndex = array.Length / 2;
+            int searches = array.Length;
 
-            return -1;
+            //while (array[middleIndex] != searchKey || searches != 0)
+            //{
+            //    middleIndex
+            //}
+
+            return middleIndex;
         }
     }
 }
