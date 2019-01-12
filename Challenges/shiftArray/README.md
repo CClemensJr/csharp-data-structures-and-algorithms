@@ -13,8 +13,12 @@ Write a function called insertShiftArray which takes in an array and the value t
 
 ##Approach and Efficiency
 ```
-I will place Big O notation details here.
+My approach to solving this problem involved creating a new array big enough to hold the original array and the value to be added to it.
+I then used a for loop to iterate over the new array, placing the values of the old array into the new array. 
+When the middle of the array was reached, the value to be added was inserted into the new array.
+
+Big O: O(N)
 ```
 
 ##Solution
-![alt text](https://via.placeholder.com/450 "Whiteboard")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/shiftArray.jpeg "Shift Array Whiteboard")
