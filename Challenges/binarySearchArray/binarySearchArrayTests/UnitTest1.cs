@@ -10,9 +10,9 @@ namespace binarySearchArrayTests
         public void ShouldReturnIndexIfSearchKeyExistsInArray()
         {
             int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int searchKey = 7;
+            int searchKey = 1;
 
-            Assert.Equal(6, Program.BinarySearch(array, searchKey));
+            Assert.Equal(0, Program.BinarySearch(array, searchKey));
         }
 
         [Fact]

@@ -6,12 +6,21 @@ namespace binarySearchArray
     {
         static void Main(string[] args)
         {
-            int[] arrayToBeSearched = { 4, 8, 15, 16, 23, 42 };
-            int searchKey = 15;
+            int[] arrayToBeSearched = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int searchKey = 7;
 
             int searchKeyIndex = BinarySearch(arrayToBeSearched, searchKey);
 
-            Console.WriteLine($"THE SEARCH KEY INDEX IS {searchKeyIndex.ToString()}");
+            if (searchKeyIndex >= 0)
+            {
+                Console.WriteLine($"\nThe search key was found at position {searchKeyIndex.ToString()} of the array.");
+            }
+            else
+            {
+                Console.WriteLine("\nThe search key was not found in the array");
+            }
+
+            Console.WriteLine("\n\nPlease press any key to exit...");
             Console.ReadLine();
         }
 
@@ -45,7 +54,7 @@ namespace binarySearchArray
                         rightPoint = midPoint - 1;
                     }
 
-                } while (leftPoint < rightPoint);
+                } while (leftPoint <= rightPoint);
             }
             catch (Exception)
             {
