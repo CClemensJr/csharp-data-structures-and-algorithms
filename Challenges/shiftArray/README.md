@@ -17,4 +17,4 @@ I will place Big O notation details here.
 ```
 
 ##Solution
-![alt text](https://via.placeholder.com/450 "Whiteboard")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/shiftArray.jpeg "Shift Array Whiteboard")
