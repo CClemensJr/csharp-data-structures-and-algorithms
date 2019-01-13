@@ -13,7 +13,12 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ##Approach and Efficiency
 ```
-I will place Big O notation details here.
+For the Binary Search algorithm I chose a do-while loop to avoid unnecessary iteration if the search key existed in the middle of the sorted array. 
+If not, the left or right boundaries were adjusted based the search key being larger or smaller than the value at the midpoint. The iteration began 
+with the midpoint adjusted to the new boundaries, then repeated the process of evaluation and boundary redefinition as appropriate. Once the search 
+key was found, the index was returned. Otherwise the function returned -1 to indicate that the search key did not exist in the array.
+
+Big O: O(log n)
 ```
 
 ##Solution
