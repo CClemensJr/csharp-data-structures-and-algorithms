@@ -23,6 +23,8 @@ namespace LinkedList
 
             linkedList.Print();
 
+            Interface();
+
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();
         }
@@ -73,19 +75,39 @@ namespace LinkedList
         {
             try
             {
-                Console.WriteLine("Lets create a linked list.");
                 Console.WriteLine("Enter whole numbers to add nodes to your list. Enter DONE when finished:");
 
-                
+                string userInput = "";
+                int nodeValue = 0;
+                LList linkedList = new LList();
+
+                while (userInput != "DONE")
+                {
+                    userInput = Console.ReadLine();
+
+                    if (userInput.Contains("DONE"))
+                    {
+                        Interface();
+                    }
+
+                    nodeValue = int.Parse(userInput);
+
+                    linkedList.Insert(nodeValue);
+                }
+
             }
             catch (Exception error)
             {
                 Console.Write("An error has occurred: ");
                 Console.WriteLine(error.Message);
 
-                Console.Write("\n\nPress any key to exit...");
-                Console.ReadLine();
+                CreateNodes();
             }
+        }
+
+        static void CheckNodes()
+        {
+            Console.WriteLine("In CheckNodes");
         }
     }
 }
