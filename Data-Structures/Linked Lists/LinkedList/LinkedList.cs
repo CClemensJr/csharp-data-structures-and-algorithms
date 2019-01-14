@@ -8,6 +8,7 @@ namespace LinkedList
         static void Main(string[] args)
         {
             LList list = new LList();
+
             Interface(list);
 
             Console.Write("\n\nPress any key to continue...");
