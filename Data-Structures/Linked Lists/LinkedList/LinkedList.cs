@@ -22,11 +22,11 @@ namespace LinkedList
             linkedList.Insert(58);
             linkedList.Insert(32);
 
-            int value = 13;
+            int value = 58;
             bool isInList = linkedList.Includes(value);
-
             Console.WriteLine($"The value of { value } is in list: { isInList }");
 
+            linkedList.Print();
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();

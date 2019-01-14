@@ -8,6 +8,7 @@ namespace LinkedList.Classes
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
+        private int Nodes { get; set; } = 1;
 
         //public LList(Node node)
         //{
@@ -18,6 +19,7 @@ namespace LinkedList.Classes
         public void Insert (int number)
         {
             Node node = new Node(number);
+            Nodes++;
 
             node.Next = Head;
             Head = node;
@@ -39,10 +41,14 @@ namespace LinkedList.Classes
             return false;
         }
 
-        public int[] Print()
+        public void Print()
         {
+            int i = 1;
 
-            return [1];
+            while (Current.Next != null)
+            {
+                Console.WriteLine($"Node { i }: Value = { Current.Value }");
+            }
         }
     }
 }
