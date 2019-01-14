@@ -7,47 +7,46 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            LList linkedList = new LList();
-
-            linkedList.Insert(27);
-            linkedList.Insert(13);
-            linkedList.Insert(29);
-            linkedList.Insert(5);
-            linkedList.Insert(49);
-            linkedList.Insert(58);
-            linkedList.Insert(32);
-
-            int value = 27;
-            bool isInList = linkedList.Includes(value);
-            Console.WriteLine($"The value of { value } is in list: { isInList }");
-
-            linkedList.Print();
-
-            Interface();
+            LList list = new LList();
+            Interface(list);
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();
         }
 
-        static void Interface()
+        static void Interface(LList list)
         {
             try
             {
+                Console.Clear();
+
                 Console.WriteLine("What would you like to do?\n\n");
                 Console.WriteLine("1. Create a linked list");
                 Console.WriteLine("2. Check if a number is in the linked list");
+                Console.WriteLine("3. See the nodes in the linked list");
+                Console.WriteLine("4. Exit");
                 string userInput = Console.ReadLine();
                 int selection = int.Parse(userInput);
 
                 switch (selection)
                 {
                     case 1:
-                        CreateNodes();
+                        CreateNodes(list);
 
                         break;
 
                     case 2:
-                        CheckNodes();
+                        CheckNodes(list);
+
+                        break;
+
+                    case 3:
+                        ShowNodes(list);
+
+                        break;
+
+                    case 4:
+                        Environment.Exit(32);
 
                         break;
 
@@ -55,7 +54,7 @@ namespace LinkedList
 
                         Console.WriteLine("Please make a valid selection");
 
-                        Interface();
+                        Interface(list);
 
                         break;
                 }
@@ -71,15 +70,15 @@ namespace LinkedList
             }
         }
 
-        static void CreateNodes()
+        static void CreateNodes(LList list)
         {
             try
             {
-                Console.WriteLine("Enter whole numbers to add nodes to your list. Enter DONE when finished:");
+                Console.Clear();
+                Console.WriteLine("\n\nEnter whole numbers to add nodes to your list. Enter DONE when finished:");
 
                 string userInput = "";
                 int nodeValue = 0;
-                LList linkedList = new LList();
 
                 while (userInput != "DONE")
                 {
@@ -87,12 +86,12 @@ namespace LinkedList
 
                     if (userInput.Contains("DONE"))
                     {
-                        Interface();
+                        Interface(list);
                     }
 
                     nodeValue = int.Parse(userInput);
 
-                    linkedList.Insert(nodeValue);
+                    list.Insert(nodeValue);
                 }
 
             }
@@ -101,13 +100,61 @@ namespace LinkedList
                 Console.Write("An error has occurred: ");
                 Console.WriteLine(error.Message);
 
-                CreateNodes();
+                CreateNodes(list);
+            }
+            finally
+            {
+                Interface(list);
             }
         }
 
-        static void CheckNodes()
+        static void CheckNodes(LList list)
         {
-            Console.WriteLine("In CheckNodes");
+            try
+            {
+                Console.Clear();
+                Console.Write("\n\nEnter a number to see if it is in the linked list:  ");
+
+                string userInput = Console.ReadLine();
+                int checkNumber = int.Parse(userInput);
+
+                bool isInList = list.Includes(checkNumber);
+
+                Console.WriteLine($"The number { checkNumber } is in the list: { isInList }");
+
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+
+                CheckNodes(list);
+            }
+            finally
+            {
+                Interface(list);
+            }
+        }
+
+        static void ShowNodes(LList list)
+        {
+            try
+            {
+                Console.Clear();
+
+                list.Print();
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+
+                ShowNodes(list);
+            }
+            finally
+            {
+                Interface(list);
+            }
         }
     }
 }
