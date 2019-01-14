@@ -6,7 +6,7 @@ namespace LinkedList.Classes
 {
     class Node
     {
-        int value { get; set; }
-        Node next { get; set; }
+        public int value { get; set; }
+        public Node Next { get; set; }
     }
 }

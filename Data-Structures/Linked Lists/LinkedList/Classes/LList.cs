@@ -6,6 +6,6 @@ namespace LinkedList.Classes
 {
     class LList
     {
-        Node head { get; set; }
+        public Node Head { get; set; }
     }
 }
