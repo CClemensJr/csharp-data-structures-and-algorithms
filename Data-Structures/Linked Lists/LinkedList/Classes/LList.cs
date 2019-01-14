@@ -17,9 +17,7 @@ namespace LinkedList.Classes
 
         public void Insert (int number)
         {
-            Node node = new Node();
-
-            node.value = number;
+            Node node = new Node(number);
 
             node.Next = Head;
             Head = node;
@@ -30,7 +28,7 @@ namespace LinkedList.Classes
         {
             while (Current.Next != null)
             {
-                if (Current.value == number)
+                if (Current.Value == number)
                 {
                     return true;
                 }
