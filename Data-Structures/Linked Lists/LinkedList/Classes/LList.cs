@@ -72,20 +72,31 @@ namespace LinkedList.Classes
         /// </summary>
         public void Print()
         {
-            int i = 1;
-
-            Current = Head;
-
-            while (Current.Next != null)
+            try
             {
+                int i = 1;
+
+                Current = Head;
+
+                while (Current.Next != null)
+                {
+                    Console.WriteLine($"Node { i }: Value = { Current.Value }");
+
+                    i++;
+
+                    Current = Current.Next;
+                }
+
                 Console.WriteLine($"Node { i }: Value = { Current.Value }");
-
-                i++;
-
-                Current = Current.Next;
             }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
 
-            Console.WriteLine($"Node { i }: Value = { Current.Value }");
+                Console.Write("\n\nPress any key to exit...");
+                Console.ReadLine();
+            }
         }
     }
 }
