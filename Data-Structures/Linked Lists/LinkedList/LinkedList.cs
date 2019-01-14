@@ -2,7 +2,7 @@
 
 namespace LinkedList
 {
-    class Program
+    class LinkedList
     {
         static void Main(string[] args)
         {
