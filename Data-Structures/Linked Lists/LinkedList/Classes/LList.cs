@@ -9,10 +9,19 @@ namespace LinkedList.Classes
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-        public LList(Node node)
+        //public LList(Node node)
+        //{
+        //    Head = node;
+        //    Current = Head;
+        //}
+
+        public void Insert (int number)
         {
+            Node node = new Node();
+
+            node.value = number;
+
             Head = node;
-            Current = Head;
         }
     }
 }
