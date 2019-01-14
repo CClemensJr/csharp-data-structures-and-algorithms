@@ -9,9 +9,16 @@ namespace LinkedList
         {
             Node node = new Node();
 
-            LList linkedList = new LList(node);
+            LList linkedList = new LList();
 
-            Console.WriteLine($"LLHEAD = { linkedList.Head.value }");
+            Console.Write($"Enter a number:");
+            string input = Console.ReadLine();
+            int nodeValue = int.Parse(input);
+
+            linkedList.Insert(nodeValue);
+
+            Console.WriteLine($"The value of Head is { linkedList.Head.value }");
+
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();
