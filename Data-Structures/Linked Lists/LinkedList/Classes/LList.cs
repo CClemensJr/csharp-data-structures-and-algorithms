@@ -8,15 +8,12 @@ namespace LinkedList.Classes
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
-        private int TotalNodes { get; set; } = 1;
-
 
         public void Insert (int number)
         {
             try
             {
                 Node node = new Node(number);
-                TotalNodes++;
 
                 node.Next = Head;
                 Head = node;
