@@ -15,7 +15,7 @@ Big O: O(log n)
 
 ## API
 ```
-Methods go here.
+Methods go herea.
 ```
 
 ##Solution
