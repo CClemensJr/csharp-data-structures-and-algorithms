@@ -23,5 +23,10 @@ namespace LinkedList.Classes
 
             Head = node;
         }
+
+        public void Includes (int number)
+        {
+
+        }
     }
 }
