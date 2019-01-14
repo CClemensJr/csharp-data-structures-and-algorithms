@@ -21,12 +21,24 @@ namespace LinkedList.Classes
 
             node.value = number;
 
+            node.Next = Head;
             Head = node;
+            Current = Head;
         }
 
-        public void Includes (int number)
+        public bool Includes (int number)
         {
+            while (Current.Next != null)
+            {
+                if (Current.value == number)
+                {
+                    return true;
+                }
 
+                Current = Current.Next;
+            }
+
+            return false;
         }
     }
 }
