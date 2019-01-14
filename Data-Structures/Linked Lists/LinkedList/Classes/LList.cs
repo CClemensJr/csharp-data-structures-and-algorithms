@@ -38,5 +38,11 @@ namespace LinkedList.Classes
 
             return false;
         }
+
+        public int[] Print()
+        {
+
+            return [1];
+        }
     }
 }
