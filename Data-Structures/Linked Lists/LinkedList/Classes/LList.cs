@@ -13,12 +13,20 @@ namespace LinkedList.Classes
 
         public void Insert (int number)
         {
-            Node node = new Node(number);
-            TotalNodes++;
+            try
+            {
+                Node node = new Node(number);
+                TotalNodes++;
 
-            node.Next = Head;
-            Head = node;
-            Current = Head;
+                node.Next = Head;
+                Head = node;
+                Current = Head;
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+            }
         }
 
         public bool Includes (int number)
