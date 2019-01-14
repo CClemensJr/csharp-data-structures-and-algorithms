@@ -8,18 +8,13 @@ namespace LinkedList.Classes
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
-        private int Nodes { get; set; } = 1;
+        private int TotalNodes { get; set; } = 1;
 
-        //public LList(Node node)
-        //{
-        //    Head = node;
-        //    Current = Head;
-        //}
 
         public void Insert (int number)
         {
             Node node = new Node(number);
-            Nodes++;
+            TotalNodes++;
 
             node.Next = Head;
             Head = node;
@@ -32,6 +27,7 @@ namespace LinkedList.Classes
             {
                 if (Current.Value == number)
                 {
+                    Console.WriteLine($"The number { number } is in the list");
                     return true;
                 }
 
@@ -45,10 +41,18 @@ namespace LinkedList.Classes
         {
             int i = 1;
 
+            Current = Head;
+
             while (Current.Next != null)
             {
                 Console.WriteLine($"Node { i }: Value = { Current.Value }");
+
+                i++;
+
+                Current = Current.Next;
             }
+
+            Console.WriteLine($"Node { i }: Value = { Current.Value }");
         }
     }
 }
