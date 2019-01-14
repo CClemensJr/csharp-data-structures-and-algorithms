@@ -27,6 +27,9 @@ namespace LinkedList.Classes
             {
                 Console.Write("An error has occurred: ");
                 Console.WriteLine(error.Message);
+
+                Console.Write("\n\nPress any key to exit...");
+                Console.ReadLine();
             }
         }
 
@@ -37,15 +40,28 @@ namespace LinkedList.Classes
         /// <returns>True if the number is in the list, False if it is not</returns>
         public bool Includes (int number)
         {
-            while (Current.Next != null)
+            try
             {
-                if (Current.Value == number)
-                {
-                    Console.WriteLine($"The number { number } is in the list");
-                    return true;
-                }
+                Current = Head;
 
-                Current = Current.Next;
+                while (Current.Next != null)
+                {
+                    if (Current.Value == number)
+                    {
+                        Console.WriteLine($"The number { number } is in the list");
+                        return true;
+                    }
+
+                    Current = Current.Next;
+                }
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+
+                Console.Write("\n\nPress any key to exit...");
+                Console.ReadLine();
             }
 
             return false;
