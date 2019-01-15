@@ -13,6 +13,8 @@ namespace LinkedList
             list.Insert(23);
             for (int i = 0; i < 10; i++)
             {
+                if (i == 6) list.Insert(777);
+
                 list.Insert(rand.Next(50));
             }
 
@@ -20,16 +22,25 @@ namespace LinkedList
 
             Console.WriteLine($"\n\nThe list has a node containing 10: { list.Includes(10) }" );
             Console.WriteLine($"The list has a node containing 23: { list.Includes(23) }");
-            Console.WriteLine($"The list has a node containing 48: { list.Includes(48) }\n\n");
+            Console.WriteLine($"The list has a node containing 48: { list.Includes(48) }");
 
+            Console.WriteLine("\n-------------------------------------------------------------------\n");
             Console.WriteLine("Here is the linked list:");
             list.Print();
 
-
-            list.Append(rand.Next(50));
-            Console.WriteLine("\n\nAppended a random number to the end of the list");
+            Console.WriteLine("\n-------------------------------------------------------------------\n");
+            Console.WriteLine("Inserted a random number before 777");
+            list.InsertBefore(777, rand.Next(50));
             Console.WriteLine("Here is the updated list\n");
             list.Print();
+
+            Console.WriteLine("\n-------------------------------------------------------------------\n");
+            list.Append(rand.Next(50));
+            Console.WriteLine("Appended a random number to the end of the list");
+            Console.WriteLine("Here is the updated list\n");
+            list.Print();
+
+
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();

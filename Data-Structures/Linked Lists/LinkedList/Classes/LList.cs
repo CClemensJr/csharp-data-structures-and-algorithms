@@ -33,6 +33,50 @@ namespace LinkedList.Classes
             }
         }
 
+        public void InsertBefore(int number, int newNumber)
+        {
+            try
+            {
+                Node node = new Node(newNumber);
+
+                Current = Head;
+
+                if (Current.Value == newNumber)
+                {
+                    Insert(newNumber);
+
+                    return;
+                }
+
+                while (Current.Next != null)
+                {
+                    if (Current.Next.Value == number)
+                    {
+                        node.Next = Current.Next;
+                        Current.Next = node;
+
+                        return;
+                    }
+
+                    Current = Current.Next;
+                }
+
+                Current.Next = node;
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+
+                Console.Write("\n\nPress any key to exit...");
+                Console.ReadLine();
+            }
+        }
+
+        /// <summary>
+        /// The Append method takes a value, iterates over the list, then sets the Next property of the Current node to the new node.
+        /// </summary>
+        /// <param name="number"></param>
         public void Append(int number)
         {
             try
