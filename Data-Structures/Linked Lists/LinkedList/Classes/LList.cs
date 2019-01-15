@@ -33,6 +33,29 @@ namespace LinkedList.Classes
             }
         }
 
+        public void Append(int number)
+        {
+            try
+            {
+                Node node = new Node(number);
+
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+
+                Current.Next = node;
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+
+                Console.Write("\n\nPress any key to exit...");
+                Console.ReadLine();
+            }
+        }
+
         /// <summary>
         /// The Includes method takes a number, sets the Current node to the Head node, and then iterates over the list, returning true of the number matches any of the node values. Otherwise it returns false
         /// </summary>
@@ -67,6 +90,7 @@ namespace LinkedList.Classes
 
             return false;
         }
+
 
         /// <summary>
         /// The Print method sets the Current node to Head and then iterates over all of the nodes in the list, writing them to the console.

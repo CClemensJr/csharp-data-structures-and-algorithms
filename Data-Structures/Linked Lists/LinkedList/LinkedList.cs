@@ -26,6 +26,11 @@ namespace LinkedList
             list.Print();
 
 
+            list.Append(rand.Next(50));
+            Console.WriteLine("\n\nAppended a random number to the end of the list");
+            Console.WriteLine("Here is the updated list\n");
+            list.Print();
+
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();
         }
