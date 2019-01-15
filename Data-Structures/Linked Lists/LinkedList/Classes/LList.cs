@@ -173,7 +173,10 @@ namespace LinkedList.Classes
         }
 
 
-        
+        /// <summary>
+        /// The Print method creates a string, uses iteration to add the values of each node to the string, and then returns the string to the consuming method.
+        /// </summary>
+        /// <returns>Returns a string with the values for allnodes</returns>
         public string Print()
         {
             try
@@ -185,7 +188,7 @@ namespace LinkedList.Classes
 
                 while (Current.Next != null)
                 {
-                    output += $"\tNode { i } >> Value = { Current.Value }\n";
+                    output += $"| Node { i } >> Value = { Current.Value } |";
 
                     i++;
 

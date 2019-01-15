@@ -83,16 +83,45 @@ namespace LinkedListsTests
     public class PrintTests
     {
         [Fact]
-        public void ShouldShowAllNodes()
+        public void ShouldReturnAString()
         {
             LList test = new LList();
 
             test.Insert(15);
             test.Insert(25);
-            test.Insert(10);
 
-            Assert.("10\n25\n15", test.Print());
+            string output = test.Print();
+
+            Assert.IsType<String>(output);
         }
+
+        [Fact]
+        public void ShouldReturnNodeValuesInString()
+        {
+            LList test = new LList();
+
+            test.Insert(15);
+            test.Insert(25);
+
+            string output = test.Print();
+
+            Assert.True(output.Contains("25"));
+        }
+
+        [Fact]
+        public void ShouldHaveAllNodesInString()
+        {
+            LList test = new LList();
+
+            test.Insert(15);
+            test.Insert(25);
+
+            string output = test.Print();
+
+            Assert.True(output.Contains("Node 1") && output.Contains("Node 2"));
+
+        }
+
     }
 
     public class AppendTests
