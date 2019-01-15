@@ -8,154 +8,169 @@ namespace LinkedList
         static void Main(string[] args)
         {
             LList list = new LList();
+            Random rand = new Random();
 
-            Interface(list);
+            list.Insert(23);
+            for (int i = 0; i < 10; i++)
+            {
+                list.Insert(rand.Next(50));
+            }
+
+            Console.WriteLine("The random link list was created.");
+
+            Console.WriteLine($"\n\nThe list has a node containing 10: { list.Includes(10) }" );
+            Console.WriteLine($"The list has a node containing 23: { list.Includes(23) }");
+            Console.WriteLine($"The list has a node containing 48: { list.Includes(48) }\n\n");
+
+            Console.WriteLine("Here is the linked list:");
+            list.Print();
+
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadLine();
         }
 
-        static void Interface(LList list)
-        {
-            try
-            {
-                Console.Clear();
+        //static void Interface(LList list)
+        //{
+        //    try
+        //    {
+        //        Console.Clear();
 
-                Console.WriteLine("What would you like to do?\n\n");
-                Console.WriteLine("1. Create a linked list");
-                Console.WriteLine("2. Check if a number is in the linked list");
-                Console.WriteLine("3. See the nodes in the linked list");
-                Console.WriteLine("4. Exit");
-                string userInput = Console.ReadLine();
-                int selection = int.Parse(userInput);
+        //        Console.WriteLine("What would you like to do?\n\n");
+        //        Console.WriteLine("1. Create a linked list");
+        //        Console.WriteLine("2. Check if a number is in the linked list");
+        //        Console.WriteLine("3. See the nodes in the linked list");
+        //        Console.WriteLine("4. Exit");
+        //        string userInput = Console.ReadLine();
+        //        int selection = int.Parse(userInput);
 
-                switch (selection)
-                {
-                    case 1:
-                        CreateNodes(list);
+        //        switch (selection)
+        //        {
+        //            case 1:
+        //                CreateNodes(list);
 
-                        break;
+        //                break;
 
-                    case 2:
-                        CheckNodes(list);
+        //            case 2:
+        //                CheckNodes(list);
 
-                        break;
+        //                break;
 
-                    case 3:
-                        ShowNodes(list);
+        //            case 3:
+        //                ShowNodes(list);
 
-                        break;
+        //                break;
 
-                    case 4:
-                        Environment.Exit(32);
+        //            case 4:
+        //                Environment.Exit(32);
 
-                        break;
+        //                break;
 
-                    default:
+        //            default:
 
-                        Console.WriteLine("Please make a valid selection");
+        //                Console.WriteLine("Please make a valid selection");
 
-                        Interface(list);
+        //                Interface(list);
 
-                        break;
-                }
+        //                break;
+        //        }
                 
-            }
-            catch (Exception error)
-            {
-                Console.Write("An error has occurred: ");
-                Console.WriteLine(error.Message);
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.Write("An error has occurred: ");
+        //        Console.WriteLine(error.Message);
 
-                Console.Write("\n\nPress any key to exit...");
-                Console.ReadLine();
-            }
-        }
+        //        Console.Write("\n\nPress any key to exit...");
+        //        Console.ReadLine();
+        //    }
+        //}
 
-        static void CreateNodes(LList list)
-        {
-            try
-            {
-                Console.Clear();
-                Console.WriteLine("\n\nEnter whole numbers to add nodes to your list. Enter DONE when finished:");
+        //static void CreateNodes(LList list)
+        //{
+        //    try
+        //    {
+        //        Console.Clear();
+        //        Console.WriteLine("\n\nEnter whole numbers to add nodes to your list. Enter DONE when finished:");
 
-                string userInput = "";
-                int nodeValue = 0;
+        //        string userInput = "";
+        //        int nodeValue = 0;
 
-                while (userInput != "DONE")
-                {
-                    userInput = Console.ReadLine();
+        //        while (userInput != "DONE")
+        //        {
+        //            userInput = Console.ReadLine();
 
-                    if (userInput.Contains("DONE"))
-                    {
-                        Interface(list);
-                    }
+        //            if (userInput.Contains("DONE"))
+        //            {
+        //                Interface(list);
+        //            }
 
-                    nodeValue = int.Parse(userInput);
+        //            nodeValue = int.Parse(userInput);
 
-                    list.Insert(nodeValue);
-                }
+        //            list.Insert(nodeValue);
+        //        }
 
-            }
-            catch (Exception error)
-            {
-                Console.Write("An error has occurred: ");
-                Console.WriteLine(error.Message);
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.Write("An error has occurred: ");
+        //        Console.WriteLine(error.Message);
 
-                CreateNodes(list);
-            }
-            finally
-            {
-                Interface(list);
-            }
-        }
+        //        CreateNodes(list);
+        //    }
+        //    finally
+        //    {
+        //        Interface(list);
+        //    }
+        //}
 
-        static void CheckNodes(LList list)
-        {
-            try
-            {
-                Console.Clear();
-                Console.Write("\n\nEnter a number to see if it is in the linked list:  ");
+        //static void CheckNodes(LList list)
+        //{
+        //    try
+        //    {
+        //        Console.Clear();
+        //        Console.Write("\n\nEnter a number to see if it is in the linked list:  ");
 
-                string userInput = Console.ReadLine();
-                int checkNumber = int.Parse(userInput);
+        //        string userInput = Console.ReadLine();
+        //        int checkNumber = int.Parse(userInput);
 
-                bool isInList = list.Includes(checkNumber);
+        //        bool isInList = list.Includes(checkNumber);
 
-                Console.WriteLine($"The number { checkNumber } is in the list: { isInList }");
+        //        Console.WriteLine($"The number { checkNumber } is in the list: { isInList }");
 
-            }
-            catch (Exception error)
-            {
-                Console.Write("An error has occurred: ");
-                Console.WriteLine(error.Message);
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.Write("An error has occurred: ");
+        //        Console.WriteLine(error.Message);
 
-                CheckNodes(list);
-            }
-            finally
-            {
-                Interface(list);
-            }
-        }
+        //        CheckNodes(list);
+        //    }
+        //    finally
+        //    {
+        //        Interface(list);
+        //    }
+        //}
 
-        static void ShowNodes(LList list)
-        {
-            try
-            {
-                Console.Clear();
+        //static void ShowNodes(LList list)
+        //{
+        //    try
+        //    {
+        //        Console.Clear();
 
-                list.Print();
-            }
-            catch (Exception error)
-            {
-                Console.Write("An error has occurred: ");
-                Console.WriteLine(error.Message);
+        //        list.Print();
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.Write("An error has occurred: ");
+        //        Console.WriteLine(error.Message);
 
-                ShowNodes(list);
-            }
-            finally
-            {
-                Interface(list);
-            }
-        }
+        //        ShowNodes(list);
+        //    }
+        //    finally
+        //    {
+        //        Interface(list);
+        //    }
+        //}
     }
 }

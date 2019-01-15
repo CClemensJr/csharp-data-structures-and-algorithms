@@ -48,12 +48,13 @@ namespace LinkedList.Classes
                 {
                     if (Current.Value == number)
                     {
-                        Console.WriteLine($"The number { number } is in the list");
                         return true;
                     }
 
                     Current = Current.Next;
                 }
+
+                if (Current.Value == number) return true;
             }
             catch (Exception error)
             {
