@@ -25,26 +25,26 @@ namespace LinkedList
             Console.WriteLine($"The list has a node containing 48: { list.Includes(48) }");
 
             Console.WriteLine("\n-------------------------------------------------------------------\n");
-            Console.WriteLine("Here is the linked list:");
-            list.Print();
+            Console.WriteLine("Here is the linked list: ");
+            Console.WriteLine(list.Print());
 
             Console.WriteLine("\n-------------------------------------------------------------------\n");
             Console.WriteLine("Inserted a random number before 777");
             list.InsertBefore(777, rand.Next(50));
             Console.WriteLine("Here is the updated list\n");
-            list.Print();
+            Console.WriteLine(list.Print());
 
             Console.WriteLine("\n-------------------------------------------------------------------\n");
             Console.WriteLine("Inserted a random number after 777");
             list.InsertAfter(777, rand.Next(50));
             Console.WriteLine("Here is the updated list\n");
-            list.Print();
+            Console.WriteLine(list.Print());
 
             Console.WriteLine("\n-------------------------------------------------------------------\n");
             list.Append(rand.Next(50));
             Console.WriteLine("Appended a random number to the end of the list");
             Console.WriteLine("Here is the updated list\n");
-            list.Print();
+            Console.WriteLine(list.Print());
 
 
 

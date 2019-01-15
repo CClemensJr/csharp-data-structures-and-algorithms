@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedList.Classes
 {
-    class LList
+    public class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
@@ -173,27 +173,26 @@ namespace LinkedList.Classes
         }
 
 
-        /// <summary>
-        /// The Print method sets the Current node to Head and then iterates over all of the nodes in the list, writing them to the console.
-        /// </summary>
-        public void Print()
+        
+        public string Print()
         {
             try
             {
                 int i = 1;
+                string output = "";
 
                 Current = Head;
 
                 while (Current.Next != null)
                 {
-                    Console.WriteLine($"Node { i }: Value = { Current.Value }");
+                    output += $"\tNode { i } >> Value = { Current.Value }\n";
 
                     i++;
 
                     Current = Current.Next;
                 }
 
-                Console.WriteLine($"Node { i }: Value = { Current.Value }");
+                return output;
             }
             catch (Exception error)
             {
@@ -203,6 +202,8 @@ namespace LinkedList.Classes
                 Console.Write("\n\nPress any key to exit...");
                 Console.ReadLine();
             }
+
+            return null;
         }
     }
 }
