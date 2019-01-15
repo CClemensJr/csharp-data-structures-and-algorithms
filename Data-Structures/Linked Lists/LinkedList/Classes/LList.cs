@@ -44,7 +44,7 @@ namespace LinkedList.Classes
             {
                 Current = Head;
 
-                if (Current.Value == newNumber)
+                if (Current.Value == number)
                 {
                     Insert(newNumber);
 
@@ -119,6 +119,8 @@ namespace LinkedList.Classes
             try
             {
                 Node node = new Node(number);
+
+                if (node.Next == null) Insert(number);
 
                 while (Current.Next != null)
                 {

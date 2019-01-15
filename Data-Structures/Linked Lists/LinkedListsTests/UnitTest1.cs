@@ -108,34 +108,84 @@ namespace LinkedListsTests
             Assert.True(output.Contains("25"));
         }
 
+    }
+
+    public class AppendTests
+    {
         [Fact]
-        public void ShouldHaveAllNodesInString()
+        public void ShouldAddNode()
         {
             LList test = new LList();
 
             test.Insert(15);
             test.Insert(25);
+            test.Append(12);
 
-            string output = test.Print();
-
-            Assert.True(output.Contains("Node 1") && output.Contains("Node 2"));
-
+            Assert.True(test.Includes(12));
         }
 
-    }
+        [Fact]
+        public void ShouldCreateFirstNodeIfNone()
+        {
+            LList test = new LList();
 
-    public class AppendTests
-    {
+            test.Append(12);
 
+            Assert.True(test.Head.Value == 12);
+        }
     }
 
     public class InsertBeforeTests
     {
+        [Fact]
+        public void ShouldAddNode()
+        {
+            LList test = new LList();
 
+            test.Insert(15);
+            test.Insert(25);
+            test.InsertBefore(15, 12);
+
+            Assert.True(test.Includes(12));
+        }
+
+        [Fact]
+        public void ShouldInsertIfReferenceNodeIsFirst()
+        {
+            LList test = new LList();
+
+            test.Insert(15);
+            test.Insert(25);
+            test.InsertBefore(25, 12);
+
+            Assert.True(test.Head.Value == 12);
+        }
     }
 
     public class InsertAfterTests
     {
+        [Fact]
+        public void ShouldAddNode()
+        {
+            LList test = new LList();
 
+            test.Insert(15);
+            test.Insert(25);
+            test.InsertAfter(25, 12);
+
+            Assert.True(test.Includes(12));
+        }
+
+        [Fact]
+        public void ShouldAppendIfReferenceNodeIsLast()
+        {
+            LList test = new LList();
+
+            test.Insert(15);
+            test.Insert(25);
+            test.InsertAfter(15, 12);
+
+            Assert.True(test.Current.Next.Value == 12);
+        }
     }
 }
