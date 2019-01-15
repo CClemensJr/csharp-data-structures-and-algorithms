@@ -33,12 +33,15 @@ namespace LinkedList.Classes
             }
         }
 
+        /// <summary>
+        /// The InsertBefore method takes the value of an existing node and a new value. The method checks if the Head is equal to the new value and inserts the new node if true. Otherwise, the method iterates through the list and when the next node value is equal to the value of the existing node, it sets the new node as the next value and then sets the value of the original node as it's next value.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="newNumber"></param>
         public void InsertBefore(int number, int newNumber)
         {
             try
             {
-                Node node = new Node(newNumber);
-
                 Current = Head;
 
                 if (Current.Value == newNumber)
@@ -52,6 +55,40 @@ namespace LinkedList.Classes
                 {
                     if (Current.Next.Value == number)
                     {
+                        Node node = new Node(newNumber);
+
+                        node.Next = Current.Next;
+                        Current.Next = node;
+
+                        return;
+                    }
+
+                    Current = Current.Next;
+                }
+            }
+            catch (Exception error)
+            {
+                Console.Write("An error has occurred: ");
+                Console.WriteLine(error.Message);
+
+                Console.Write("\n\nPress any key to exit...");
+                Console.ReadLine();
+            }
+        }
+
+        public void InsertAfter(int number, int newNumber)
+        {
+            try
+            {
+                Current = Head;
+
+                while (Current.Next != null)
+                {
+                    if (Current.Next.Value == number)
+                    {
+                        Node node = new Node(newNumber);
+
+                        Current = Current.Next;
                         node.Next = Current.Next;
                         Current.Next = node;
 
@@ -61,7 +98,7 @@ namespace LinkedList.Classes
                     Current = Current.Next;
                 }
 
-                Current.Next = node;
+                if (Current.Value == number) Append(newNumber);
             }
             catch (Exception error)
             {
