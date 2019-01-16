@@ -9,9 +9,14 @@ namespace llKthFromTheEnd
             Console.WriteLine("Hello World!");
         }
 
-        static int FindKthFromTheEnd(int index)
+        static int FindKthFromTheEnd(int k)
         {
 
+            return 0;
+        }
+
+        static int CountNodes()
+        {
             return 0;
         }
     }
