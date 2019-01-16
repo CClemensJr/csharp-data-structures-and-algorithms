@@ -11,7 +11,6 @@ namespace llKthFromTheEnd
 
         static int FindKthFromTheEnd(int k)
         {
-
             return 0;
         }
 
