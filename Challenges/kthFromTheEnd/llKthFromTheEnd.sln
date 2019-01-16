@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ll_kth_from_the_end", "ll_kth_from_the_end\ll_kth_from_the_end.csproj", "{04F09B58-0868-4ABE-9C23-AFADE18F9E7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "llKthFromTheEnd", "ll_kth_from_the_end\llKthFromTheEnd.csproj", "{04F09B58-0868-4ABE-9C23-AFADE18F9E7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

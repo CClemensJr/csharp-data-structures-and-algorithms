@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ll_kth_from_the_end
+namespace llKthFromTheEnd
 {
     class Program
     {
