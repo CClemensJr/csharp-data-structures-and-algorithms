@@ -20,5 +20,5 @@ until the last node - k is reached. Then the value is returned. a
 Big O: Time: O(n), Space: O(1)
 ```
 
-##Solution
+## Solution
 ![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/kthFromTheEnd.JPG "Kth From End Whiteboard")
