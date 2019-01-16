@@ -8,5 +8,11 @@ namespace llKthFromTheEnd
         {
             Console.WriteLine("Hello World!");
         }
+
+        static int FindKthFromTheEnd(int index)
+        {
+
+            return 0;
+        }
     }
 }
