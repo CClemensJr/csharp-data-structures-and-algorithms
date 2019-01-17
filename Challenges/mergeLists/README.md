@@ -14,11 +14,15 @@
 
 ## Approach and Efficiency
 ```
-For this algorithm I chose to first call a method that iterates over the linked list and then counts the nodes. Once this is found the list is iterated over
-until the last node - k is reached. Then the value is returned. a
+	For this challenge I chose to use a loop to traverse the linked lists awhile a temp variable was not equal to null.
+	During each iteration:
+	* The temp variable is set to Current.Next (Current is originally set to the Head of the first linked list)
+	* Current.Next is set to the head of link list 2
+	* Set the head of link list 2 to temp
+	* Set Current to Current.Next
 
 Big O: Time: O(n), Space: O(1)
 ```
 
 ## Solution
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/mergeLists.JPG "Kth From End Whiteboard")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/mergeLists.JPG "Merge Linked Lists")
