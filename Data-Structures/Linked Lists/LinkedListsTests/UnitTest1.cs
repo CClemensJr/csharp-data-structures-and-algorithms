@@ -94,20 +94,6 @@ namespace LinkedListsTests
 
             Assert.IsType<String>(output);
         }
-
-        [Fact]
-        public void ShouldReturnNodeValuesInString()
-        {
-            LList test = new LList();
-
-            test.Insert(15);
-            test.Insert(25);
-
-            string output = test.Print();
-
-            Assert.True(output.Contains("25"));
-        }
-
     }
 
     public class AppendTests
@@ -171,6 +157,7 @@ namespace LinkedListsTests
 
             test.Insert(15);
             test.Insert(25);
+            test.Insert(37);
             test.InsertAfter(25, 12);
 
             Assert.True(test.Includes(12));
