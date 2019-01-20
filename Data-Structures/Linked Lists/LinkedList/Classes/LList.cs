@@ -76,6 +76,11 @@ namespace LinkedList.Classes
             }
         }
 
+        /// <summary>
+        /// Method takes in a nodevalue, traverses over the linked list, then inserts a new node after the original node value
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="newNumber"></param>
         public void InsertAfter(int number, int newNumber)
         {
             try
