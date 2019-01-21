@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StacksAndQueues", "StacksAndQueues\StacksAndQueues.csproj", "{A616CC9A-82A5-4EBD-9ECB-D8B9DFD97BE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StacksAndQueuesTests", "StacksAndQueuesTests\StacksAndQueuesTests.csproj", "{EAA45109-3DD4-4F2B-955E-3F7614E552D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A616CC9A-82A5-4EBD-9ECB-D8B9DFD97BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A616CC9A-82A5-4EBD-9ECB-D8B9DFD97BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A616CC9A-82A5-4EBD-9ECB-D8B9DFD97BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA45109-3DD4-4F2B-955E-3F7614E552D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA45109-3DD4-4F2B-955E-3F7614E552D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA45109-3DD4-4F2B-955E-3F7614E552D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA45109-3DD4-4F2B-955E-3F7614E552D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
