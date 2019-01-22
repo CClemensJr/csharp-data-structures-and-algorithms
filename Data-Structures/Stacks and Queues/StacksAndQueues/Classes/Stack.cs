@@ -7,7 +7,6 @@ namespace StacksAndQueues.Classes
     public class Stack
     {
         public Node Top { get; set; }
-        public Node Temp { get; set; }
 
         /// <summary>
         /// This method takes a new node and pushes it into the top of the stack by setting it = to the Top node.
@@ -15,8 +14,16 @@ namespace StacksAndQueues.Classes
         /// <param name="node"></param>
         public void Push(Node node)
         {
-            node.Next = Top;
-            Top = node;
+            try
+            {
+                node.Next = Top;
+                Top = node;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Something has happened: ");
+                Console.WriteLine(error.Message);
+            }
         }
 
         /// <summary>
@@ -26,11 +33,22 @@ namespace StacksAndQueues.Classes
         /// <returns>The node that was removed from the stack</returns>
         public Node Pop(Node node)
         {
-            Temp = Top;
-            Top = node.Next;
-            Temp.Next = null;
+            try
+            {
+                Node temp = new Node();
+                temp = Top;
+                Top = node.Next;
+                temp.Next = null;
 
-            return Temp;
+                return temp;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Something has happened: ");
+                Console.WriteLine(error.Message);
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -39,7 +57,17 @@ namespace StacksAndQueues.Classes
         /// <returns>The node that is at the top of the stack</returns>
         public Node Peek()
         {
-            return Top;
+            try
+            {
+                return Top;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Something has happened: ");
+                Console.WriteLine(error.Message);
+            }
+
+            return null;
         }
     }
 }

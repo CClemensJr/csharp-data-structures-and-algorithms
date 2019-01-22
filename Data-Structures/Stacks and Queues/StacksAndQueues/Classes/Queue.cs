@@ -21,18 +21,26 @@ namespace StacksAndQueues.Classes
         /// <param name="node"></param>
         public void Enqueue(Node node)
         {
-            if (Front == null)
+            try
             {
-                Front = node;
-                Rear = node;
-            }
-            else
-            {
-                Rear.Next = node;
-                Rear = node;
-            }
+                if (Front == null)
+                {
+                    Front = node;
+                    Rear = node;
+                }
+                else
+                {
+                    Rear.Next = node;
+                    Rear = node;
+                }
 
-            Size++;
+                Size++;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Something has happened: ");
+                Console.WriteLine(error.Message);
+            }
         }
 
         /// <summary>
@@ -41,13 +49,23 @@ namespace StacksAndQueues.Classes
         /// <returns>The node that was removed from the queue</returns>
         public Node Dequeue()
         {
-            Node temp = new Node();
+            try
+            {
+                Node temp = new Node();
 
-            temp = Front;
-            Front = Front.Next;
-            temp.Next = null;
+                temp = Front;
+                Front = Front.Next;
+                temp.Next = null;
 
-            return temp;
+                return temp;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Something has happened: ");
+                Console.WriteLine(error.Message);
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -55,7 +73,17 @@ namespace StacksAndQueues.Classes
         /// </summary>
         public Node Peek()
         {
-            return Front;
+            try
+            {
+                return Front;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Something has happened: ");
+                Console.WriteLine(error.Message);
+            }
+
+            return null;
         }
     }
 }
