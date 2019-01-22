@@ -23,5 +23,10 @@ namespace StacksAndQueues.Classes
 
             return Temp;
         }
+
+        public Node Peek()
+        {
+            return Top;
+        }
     }
 }
