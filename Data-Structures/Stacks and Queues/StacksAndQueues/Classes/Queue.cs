@@ -10,12 +10,13 @@ namespace StacksAndQueues.Classes
         public Node Rear { get; set; }
         public Node Temp { get; set; }
 
-        public void Enqueue()
+        public void Enqueue(Node node)
         {
-
+            Rear.Next = node;
+            Rear = node;
         }
 
-        public void Dequeue()
+        public Node Dequeue()
         {
 
         }
