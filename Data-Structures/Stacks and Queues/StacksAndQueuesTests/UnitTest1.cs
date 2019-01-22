@@ -19,7 +19,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanAcceptANode()
         {
-
+            
         }
 
         [Fact]
@@ -36,12 +36,6 @@ namespace StacksAndQueuesTests
 
 
         //dequeue
-        [Fact]
-        public void CanAcceptANode()
-        {
-
-        }
-
         [Fact]
         public void CanRemoveFromQueue()
         {
