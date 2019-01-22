@@ -23,7 +23,7 @@ namespace StacksAndQueues.Classes
 
         public void Peek()
         {
-
+            return Front;
         }
     }
 }
