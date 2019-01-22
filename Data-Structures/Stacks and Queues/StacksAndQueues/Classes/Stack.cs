@@ -6,5 +6,7 @@ namespace StacksAndQueues.Classes
 {
     class Stack
     {
+        public Node Top { get; set; }
+        public Node Temp { get; set; }
     }
 }
