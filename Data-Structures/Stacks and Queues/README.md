@@ -1,22 +1,37 @@
 # Stacks and Queues
-<A linear data structure used to sift through unknown amounts of data.
+<A stacks and queues are data structures used to sift through data
 
 ## Challenge
 ```
-Write an application that implements a singly linked list data structure to let the user know at which node the value exists.
+Wrote an application that implements both a Stack data structure and a Queue;
 ```
 
 ## Approach and Efficiency
 ```
-Add linked list approach here.
+For this implementation I used methods that take a node and put them inside the queue or stack as well as methods that remove nodes from the stack or queue. No iteration is used and only a single temporary node created.
 
-Big O: O(log n)
+Big O: O(1)
 ```
 
 ## API
+### Stack
 ```
-Methods go herea.
-```
+Within the Stack implementation I created 3 methods: Push, Pop, and Peek. 
 
-##Solution
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/binarySearchArray.jpeg "Binary Search Whiteboard")
+Push takes a node and puts it into the stack.
+
+Pop removes the node on the top of the stack.
+
+Peek returns the node on top of the stack.
+
+```
+### Queue
+```
+Within the Queue implementation I created 3 methods: Enqueue, Dequeue, and Peek;
+
+Enqueue takes a node and puts it into the queue.
+
+Dequeue removes the front node from the queue.
+
+Peek returns the node at the front of the queue
+```
