@@ -8,5 +8,11 @@ namespace StacksAndQueues.Classes
     {
         public Node Top { get; set; }
         public Node Temp { get; set; }
+
+        public Push(Node node)
+        {
+            node.Next = Top;
+            Top = node;
+        }
     }
 }
