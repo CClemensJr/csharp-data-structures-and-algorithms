@@ -18,7 +18,11 @@ namespace StacksAndQueues.Classes
 
         public Node Dequeue()
         {
+            Temp = Front;
+            Front = Front.Next;
+            Temp.Next = null;
 
+            return Temp;
         }
 
         public void Peek()
