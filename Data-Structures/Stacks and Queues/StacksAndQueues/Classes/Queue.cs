@@ -9,6 +9,7 @@ namespace StacksAndQueues.Classes
         public Node Front { get; set; }
         public Node Rear { get; set; }
         public Node Temp { get; set; }
+        public int Size { get; set; } = 0;
 
         /// <summary>
         /// The Enqueue method allows a new node to be placed in the end of the queue. It sets the node Next to the Rear node = to the incoming node then sets the Rear node equal to the incoming node.
@@ -18,6 +19,8 @@ namespace StacksAndQueues.Classes
         {
             Rear.Next = node;
             Rear = node;
+
+            Size++;
         }
 
         /// <summary>
@@ -36,7 +39,7 @@ namespace StacksAndQueues.Classes
         /// <summary>
         /// This method returns the Front node in the queue.
         /// </summary>
-        public void Peek()
+        public Node Peek()
         {
             return Front;
         }

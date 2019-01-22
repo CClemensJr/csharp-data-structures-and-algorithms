@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using StacksAndQueuesTests.Classes;
+using StacksAndQueues.Classes;
 
 namespace StacksAndQueuesTests
 {
@@ -17,15 +17,14 @@ namespace StacksAndQueuesTests
     {
         //enqueue
         [Fact]
-        public void CanAcceptANode()
+        public static void CanAddToQueue()
         {
-            
-        }
+            Queue queue = new Queue();
+            Node node = new Node(7);
 
-        [Fact]
-        public void CanAddToQueue()
-        {
+            queue.Enqueue(node);
 
+            Assert.True(queue.Size > 0);
         }
 
         [Fact]
