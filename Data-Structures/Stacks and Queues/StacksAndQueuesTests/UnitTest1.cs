@@ -3,12 +3,17 @@ using Xunit;
 
 namespace StacksAndQueuesTests
 {
-    public class UnitTest1
+    public class StackTests
     {
         [Fact]
         public void Test1()
         {
 
         }
+    }
+
+    public class QueueTests
+    {
+
     }
 }
