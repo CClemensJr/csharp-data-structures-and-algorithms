@@ -9,10 +9,19 @@ namespace StacksAndQueues.Classes
         public Node Top { get; set; }
         public Node Temp { get; set; }
 
-        public Push(Node node)
+        public void Push(Node node)
         {
             node.Next = Top;
             Top = node;
+        }
+
+        public Node Pop(Node node)
+        {
+            Temp = Top;
+            Top = node.Next;
+            Temp.Next = null;
+
+            return Temp;
         }
     }
 }
