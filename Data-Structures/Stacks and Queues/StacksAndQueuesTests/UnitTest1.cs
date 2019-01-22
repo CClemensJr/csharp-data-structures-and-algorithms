@@ -24,13 +24,18 @@ namespace StacksAndQueuesTests
 
             queue.Enqueue(node);
 
-            Assert.True(queue.Size > 0);
+            Assert.True(queue.Size == 1);
         }
 
         [Fact]
         public void CanSetNewNodeToRear()
         {
+            Queue queue = new Queue();
+            Node node = new Node(7);
 
+            queue.Enqueue(node);
+
+            Assert.Equal(7, queue.Rear.Value);
         }
 
 

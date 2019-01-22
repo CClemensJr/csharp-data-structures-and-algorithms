@@ -8,8 +8,12 @@ namespace StacksAndQueues.Classes
     {
         public Node Front { get; set; }
         public Node Rear { get; set; }
-        public Node Temp { get; set; }
-        public int Size { get; set; } = 0;
+        public int Size { get; set; } 
+
+        public Queue()
+        {
+            Size = 0;
+        }
 
         /// <summary>
         /// The Enqueue method allows a new node to be placed in the end of the queue. It sets the node Next to the Rear node = to the incoming node then sets the Rear node equal to the incoming node.
@@ -17,8 +21,16 @@ namespace StacksAndQueues.Classes
         /// <param name="node"></param>
         public void Enqueue(Node node)
         {
-            Rear.Next = node;
-            Rear = node;
+            if (Front == null)
+            {
+                Front = node;
+                Rear = node;
+            }
+            else
+            {
+                Rear.Next = node;
+                Rear = node;
+            }
 
             Size++;
         }
@@ -29,11 +41,13 @@ namespace StacksAndQueues.Classes
         /// <returns>The node that was removed from the queue</returns>
         public Node Dequeue()
         {
-            Temp = Front;
-            Front = Front.Next;
-            Temp.Next = null;
+            Node temp = new Node();
 
-            return Temp;
+            temp = Front;
+            Front = Front.Next;
+            temp.Next = null;
+
+            return temp;
         }
 
         /// <summary>
