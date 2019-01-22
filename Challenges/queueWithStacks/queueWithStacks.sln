@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueWithStacks", "queueWithStacks\QueueWithStacks.csproj", "{A7F520B2-65F9-4E50-BD0F-11A2B56B8B1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "queueWithStacks", "queueWithStacks\queueWithStacks.csproj", "{A7F520B2-65F9-4E50-BD0F-11A2B56B8B1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueWithStacksTests", "QueueWithStacksTests\QueueWithStacksTests.csproj", "{019F0DDE-D104-4E6B-BDB9-1475395521EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "queueWithStacksTests", "QueueWithStacksTests\queueWithStacksTests.csproj", "{019F0DDE-D104-4E6B-BDB9-1475395521EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
