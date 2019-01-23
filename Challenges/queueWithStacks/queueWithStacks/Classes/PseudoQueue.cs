@@ -11,7 +11,15 @@ namespace queueWithStacks.Classes
 
         public void Enqueue(Node node)
         {
+            Stack tempStack = new Stack();
 
+            if (queueStack.Top != null)
+            {
+                while (queueStack.Top != null)
+                {
+                    tempStack.Push(queueStack.Pop());
+                }
+            }
         }
 
         public Node Dequeue()
