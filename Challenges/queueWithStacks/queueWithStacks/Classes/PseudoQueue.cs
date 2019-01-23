@@ -37,8 +37,17 @@ namespace queueWithStacks.Classes
             }
         }
 
+        /// <summary>
+        /// This method checks the stack for a node. If there is one, it is popped otherwise null is returned.
+        /// </summary>
+        /// <returns>A node object that has been removed from a stack</returns>
         public Node Dequeue()
         {
+            if (queueStack.Top != null)
+            {
+                return queueStack.Pop();
+            }
+
             return null;
         }
     }
