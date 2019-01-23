@@ -10,6 +10,12 @@ namespace queueWithStacks.Classes
         public Stack queueStack { get; set; }
         public Stack tempStack { get; set; }
 
+        public PseudoQueue()
+        {
+            queueStack = new Stack();
+            tempStack = new Stack();
+        }
+
         /// <summary>
         /// This method takes in a node object. If the queue stack is empty the node is pushed into the stack, otherwise the queue stack is emptied into the temporary stack, the node placed in the empty queue stack, and then the temp stack is emptied into the queue stack
         /// </summary>
