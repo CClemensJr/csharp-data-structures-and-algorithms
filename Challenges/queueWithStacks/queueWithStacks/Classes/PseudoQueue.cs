@@ -9,6 +9,10 @@ namespace queueWithStacks.Classes
     {
         public Stack queueStack { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="node"></param>
         public void Enqueue(Node node)
         {
             Stack tempStack = new Stack();
@@ -19,6 +23,17 @@ namespace queueWithStacks.Classes
                 {
                     tempStack.Push(queueStack.Pop());
                 }
+
+                queueStack.Push(node);
+
+                while (tempStack.Top != null)
+                {
+                    queueStack.Push(tempStack.Pop());
+                }
+            }
+            else
+            {
+                queueStack.Push(node);
             }
         }
 
