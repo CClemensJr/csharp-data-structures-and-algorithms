@@ -1,28 +1,39 @@
-# Merge Two Linked Lists
+# Queue with Stacks
 
 ## Challenge
 ```
-	Write a method for the Linked List class which takes two linked lists as arguments. Zip the two linked lists together into one
-	so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+	Create a brand new PseudoQueue class that will implement the standard queue interface, but will internally 
+	only utilize 2 Stack objects with the following methods:
+		enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+		dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+	The Stack instances have only push, pop, and peek methods. Instantiate these Stack objects in your PseudoQueue constructor.
 ```
 
 ## Example
+### Enqueue
 |Input|Output|
 |-----|-------|
-| head-> [4]-> [8]-> [15]-> X, | head-> [4]-> [2]-> [8]-> [7]-> [15]-> [12]-> X |
-| head-> [2]-> [7]-> [12]-> X  
+| [5], [4]-> [8]-> [15] | [5]-> [4]-> [8]-> [15] |
+
+### Dequeue
+|Input|Output|
+|-----|-------|
+| [5]-> [4]-> [8]-> [15] | [5]-> [4]-> [8] |
 
 ## Approach and Efficiency
+### Enqueue
 ```
-	For this challenge I chose to use a loop to traverse the linked lists awhile a temp variable was not equal to null.
+	For this challenge I chose to use a while loop to traverse empty one stack into another if the stack.top was not null
 	During each iteration:
-	* The temp variable is set to Current.Next (Current is originally set to the Head of the first linked list)
-	* Current.Next is set to the head of link list 2
-	* Set the head of link list 2 to temp
-	* Set Current to Current.Next
+	* The Top of the queue stack is popped off.
+	* The returned value of the pop method is pushed in a temporary queue.
+	
+	When the top of the queue stack is equal to null, the new node is inserted into the stack and then a while loop is used
+	to pop the values from the temp stack and push them back into the queue stack.
 
 Big O: Time: O(n), Space: O(1)
 ```
 
 ## Solution
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/mergeLists.JPG "Merge Linked Lists")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/queueWithStacks.JPG "Queue with Stacks")
