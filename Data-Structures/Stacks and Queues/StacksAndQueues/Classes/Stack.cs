@@ -31,13 +31,13 @@ namespace StacksAndQueues.Classes
         /// </summary>
         /// <param name="node"></param>
         /// <returns>The node that was removed from the stack</returns>
-        public Node Pop(Node node)
+        public Node Pop()
         {
             try
             {
                 Node temp = new Node();
                 temp = Top;
-                Top = node.Next;
+                Top = temp.Next;
                 temp.Next = null;
 
                 return temp;
