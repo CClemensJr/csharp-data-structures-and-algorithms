@@ -1,4 +1,6 @@
 ﻿using System;
+using queueWithStacks.Classes;
+using StacksAndQueues.Classes;
 
 namespace queueWithStacks
 {
@@ -11,6 +13,16 @@ namespace queueWithStacks
 
         public static void QueueWithStacks()
         {
+            Console.WriteLine("A queue with the following values has been created: ");
+
+            PseudoQueue queue = new PseudoQueue();
+            
+            for (int i = 0; i < 10; i++)
+            {
+                Node node(i) = new Node();
+
+            }
+
 
         }
     }
