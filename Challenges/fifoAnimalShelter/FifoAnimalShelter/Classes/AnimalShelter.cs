@@ -6,5 +6,9 @@ namespace FifoAnimalShelter.Classes
 {
     class AnimalShelter
     {
+        public Dog dog { get; set; }
+        public Cat cat { get; set; }
+
+        
     }
 }
