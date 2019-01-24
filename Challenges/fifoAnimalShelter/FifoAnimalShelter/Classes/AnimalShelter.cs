@@ -13,12 +13,15 @@ namespace FifoAnimalShelter.Classes
         
         public AnimalShelter()
         {
-            Dog = new Dog();
-            Cat = new Cat();
+            Dog.Value = "dog";
+            Cat.Value = "cat";
             Shelter = new Queue();
         }
 
-        public void Enqueue(Dog dog || Cat cat)
+        public void Enqueue(Animal animal)
+        {
+            
+        }
 
 
     }
