@@ -1,4 +1,4 @@
-# Fifo Animal Shelter
+# First In, First Out Animal Shelter
 
 ## Challenge
 ```
