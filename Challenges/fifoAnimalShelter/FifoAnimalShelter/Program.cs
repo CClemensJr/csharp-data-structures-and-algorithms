@@ -6,7 +6,12 @@ namespace FifoAnimalShelter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            FifoAnimalShelter();
+        }
+
+        public static void FifoAnimalShelter()
+        {
+            Console.WriteLine("Class stuff will go here");
         }
     }
 }
