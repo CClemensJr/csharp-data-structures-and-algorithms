@@ -18,6 +18,8 @@ namespace FifoAnimalShelter.Classes
             Shelter = new Queue();
         }
 
+        public void Enqueue(Dog dog || Cat cat)
+
 
     }
 }
