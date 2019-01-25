@@ -11,6 +11,7 @@ namespace StacksAndQueuesTests
         public void CanAddToStack()
         {
             Stack stack = new Stack();
+
             Node node = new Node(7);
 
             stack.Push(node);
@@ -22,6 +23,7 @@ namespace StacksAndQueuesTests
         public void CanSetNewNodeToTop()
         {
             Stack stack = new Stack();
+
             Node node = new Node(7);
             Node node1 = new Node(35);
 
@@ -35,6 +37,7 @@ namespace StacksAndQueuesTests
         public void CanVerifyTopNodeIsNotFirstNode()
         {
             Stack stack = new Stack();
+
             Node node = new Node(7);
             Node node1 = new Node(35);
 
@@ -46,6 +49,59 @@ namespace StacksAndQueuesTests
 
 
         // POP TESTS
+        [Fact]
+        public void CanRemoveFromStack()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            stack.Pop();
+
+            Assert.True(stack.Size == 2);
+        }
+
+        [Fact]
+        public void CanSetTop()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            stack.Pop();
+
+            Assert.True(stack.Top.Value == node2.Value);
+        }
+
+        [Fact]
+        public void CanReturnRemovedNode()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            Node removedNode = stack.Pop();
+
+            Assert.True(removedNode.Value == node3.Value);
+        }
 
         // PEEK TESTS
     }
