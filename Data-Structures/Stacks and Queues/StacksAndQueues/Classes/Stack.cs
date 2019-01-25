@@ -7,6 +7,7 @@ namespace StacksAndQueues.Classes
     public class Stack
     {
         public Node Top { get; set; }
+        public int Size { get; set; }
 
         /// <summary>
         /// This method takes a new node and pushes it into the top of the stack by setting it = to the Top node.
@@ -18,6 +19,8 @@ namespace StacksAndQueues.Classes
             {
                 node.Next = Top;
                 Top = node;
+
+                Size++;
             }
             catch (Exception error)
             {
@@ -39,6 +42,8 @@ namespace StacksAndQueues.Classes
                 temp = Top;
                 Top = temp.Next;
                 temp.Next = null;
+
+                Size--;
 
                 return temp;
             }
