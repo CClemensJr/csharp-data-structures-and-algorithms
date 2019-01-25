@@ -6,11 +6,48 @@ namespace StacksAndQueuesTests
 {
     public class StackTests
     {
+        // PUSH TESTS
         [Fact]
-        public void Test1()
+        public void CanAddToStack()
         {
+            Stack stack = new Stack();
+            Node node = new Node(7);
 
+            stack.Push(node);
+
+            Assert.True(stack.Size == 1);
         }
+
+        [Fact]
+        public void CanSetNewNodeToTop()
+        {
+            Stack stack = new Stack();
+            Node node = new Node(7);
+            Node node1 = new Node(35);
+
+            stack.Push(node);
+            stack.Push(node1);
+
+            Assert.True(stack.Top.Value == node1.Value);
+        }
+
+        [Fact]
+        public void CanVerifyTopNodeIsNotFirstNode()
+        {
+            Stack stack = new Stack();
+            Node node = new Node(7);
+            Node node1 = new Node(35);
+
+            stack.Push(node);
+            stack.Push(node1);
+
+            Assert.True(stack.Top.Value != node.Value);
+        }
+
+
+        // POP TESTS
+
+        // PEEK TESTS
     }
 
     public class QueueTests
