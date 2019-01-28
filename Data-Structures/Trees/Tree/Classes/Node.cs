@@ -9,6 +9,5 @@ namespace Tree.Classes
         public int Value { get; set; }
         public Node LeftChild { get; set; }
         public Node RightChild { get; set; }
-
     }
 }
