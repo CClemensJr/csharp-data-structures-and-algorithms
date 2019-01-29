@@ -104,6 +104,32 @@ namespace StacksAndQueuesTests
         }
 
         // PEEK TESTS
+        [Fact]
+        public void CanReturnNode()
+        {
+            Stack stack = new Stack();
+            Node node = new Node(7);
+
+            stack.Push(node);
+
+            Assert.Equal(7, stack.Peek().Value);
+        }
+
+        [Fact]
+        public void CanReturnTop()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            Assert.True(stack.Peek().Value == node3.Value);
+        }
     }
 
     public class QueueTests
