@@ -6,10 +6,129 @@ namespace StacksAndQueuesTests
 {
     public class StackTests
     {
+        // PUSH TESTS
         [Fact]
-        public void Test1()
+        public void CanAddToStack()
         {
+            Stack stack = new Stack();
 
+            Node node = new Node(7);
+
+            stack.Push(node);
+
+            Assert.True(stack.Size == 1);
+        }
+
+        [Fact]
+        public void CanSetNewNodeToTop()
+        {
+            Stack stack = new Stack();
+
+            Node node = new Node(7);
+            Node node1 = new Node(35);
+
+            stack.Push(node);
+            stack.Push(node1);
+
+            Assert.True(stack.Top.Value == node1.Value);
+        }
+
+        [Fact]
+        public void CanVerifyTopNodeIsNotFirstNode()
+        {
+            Stack stack = new Stack();
+
+            Node node = new Node(7);
+            Node node1 = new Node(35);
+
+            stack.Push(node);
+            stack.Push(node1);
+
+            Assert.True(stack.Top.Value != node.Value);
+        }
+
+
+        // POP TESTS
+        [Fact]
+        public void CanRemoveFromStack()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            stack.Pop();
+
+            Assert.True(stack.Size == 2);
+        }
+
+        [Fact]
+        public void CanSetTop()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            stack.Pop();
+
+            Assert.True(stack.Top.Value == node2.Value);
+        }
+
+        [Fact]
+        public void CanReturnRemovedNode()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            Node removedNode = stack.Pop();
+
+            Assert.True(removedNode.Value == node3.Value);
+        }
+
+        // PEEK TESTS 
+        [Fact]
+        public void CanReturnNode()
+        {
+            Stack stack = new Stack();
+            Node node = new Node(7);
+
+            stack.Push(node);
+
+            Assert.Equal(7, stack.Peek().Value);
+        }
+
+        [Fact]
+        public void CanReturnTop()
+        {
+            Stack stack = new Stack();
+
+            Node node1 = new Node(7);
+            Node node2 = new Node(10);
+            Node node3 = new Node(71);
+
+            stack.Push(node1);
+            stack.Push(node2);
+            stack.Push(node3);
+
+            Assert.True(stack.Peek().Value == node3.Value);
         }
     }
 
