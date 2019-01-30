@@ -24,5 +24,5 @@
 ```
 
 ## Solution
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversal1.JPG "Breadth First Traversal part 1")
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversal2.JPG "Breadth First Traversal part 2")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversal1.JPG "Breadth First Traversal Part 1")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversal2.JPG "Breadth First Traversal Part 2")
