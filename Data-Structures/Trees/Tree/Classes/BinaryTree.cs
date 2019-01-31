@@ -12,21 +12,30 @@ namespace Tree.Classes
         /// <returns>An array of values in the tree</returns>
         public List<int> PreOrder(Node root)
         {
-            List<int> list = new List<int>();
-
-            list.Add(root.Value);
-
-            if (root.LeftChild != null)
+            try
             {
-                PreOrder(root.LeftChild);
-            }
+                List<int> list = new List<int>();
 
-            if (root.RightChild != null)
-            {
-                PreOrder(root.RightChild);
-            }
+                list.Add(root.Value);
+
+                if (root.LeftChild != null)
+                {
+                    PreOrder(root.LeftChild);
+                }
+
+                if (root.RightChild != null)
+                {
+                    PreOrder(root.RightChild);
+                }
             
-            return list;
+                return list;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine($"An error has occurred: { error.Message }");
+            }
+
+            return null;
         }
 
         /// <summary>
