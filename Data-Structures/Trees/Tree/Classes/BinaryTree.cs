@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tree.Classes
 {
-    public class BinaryTree
+    public class BinaryTree : Tree
     {
         /// <summary>
         /// This method traverses through the tree by accessing the root node first then accessing the left child before the right child.

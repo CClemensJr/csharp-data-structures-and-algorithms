@@ -5,43 +5,8 @@ using Tree.Classes;
 
 namespace Tree.Classes
 {
-    public class BinarySearchTree
+    public class BinarySearchTree : Tree
     {
-        public Node root { get; set; }
-
-        /// <summary>
-        /// This method takes in a value and adds it to the tree. If the root node is null, the node is set to root. Subsequent nodes are added in a left to right fashion.
-        /// </summary>
-        /// <param name="value"></param>
-        public void Add(int value)
-        {
-            try
-            {
-                Node node = new Node();
-
-                node.Value = value;
-
-                if (root == null)
-                {
-                    root = node;
-                }
-
-                if (root.LeftChild == null)
-                {
-                    root.LeftChild = node;
-                }
-
-                if (root.RightChild == null)
-                {
-                    root.RightChild = node;
-                }
-            }
-            catch(Exception error)
-            {
-                Console.WriteLine($"An error has occurred: { error.Message } ");
-            }
-        }
-
         /// <summary>
         /// This method takes a value then traverses the tree returning true or false depending on if the value is in the tree
         /// </summary>
