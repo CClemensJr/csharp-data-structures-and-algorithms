@@ -13,7 +13,7 @@ namespace TreeTests
 
             testNode.Value = 7;
 
-            Assert.True(testNode.Value == 7);
+            Assert.Equal(7, testNode.Value);
         }
 
         [Fact]
@@ -23,9 +23,9 @@ namespace TreeTests
 
             testNode.Value = 7;
 
-            int testValue = testNode.Value;
+            int testValue = Convert.ToInt32(testNode.Value);
 
-            Assert.True(testValue == testNode.Value);
+            Assert.True(testValue == Convert.ToInt32(testNode.Value));
         }
 
         [Fact]
@@ -34,11 +34,11 @@ namespace TreeTests
             Node testNode = new Node();
 
             testNode.Value = 7;
-            int testValue = testNode.Value;
+            int testValue = Convert.ToInt32(testNode.Value);
 
             testNode.Value = 89;
 
-            Assert.True(testNode.Value != testValue);
+            Assert.Equal(testValue, testNode.Value);
         }
     }
 
@@ -63,7 +63,7 @@ namespace TreeTests
 
             testTree.Root.Value = 7;
 
-            Assert.True(testTree.Root.Value == 7);
+            Assert.Equal(7, testTree.Root.Value);
         }
 
         [Fact]
@@ -75,7 +75,7 @@ namespace TreeTests
             testTree.Add(7);
             testTree.Add(10);
 
-            Assert.Equal(10, testTree.root.RightChild.Value);
+            Assert.Equal(10, testTree.Root.RightChild.Value);
         }
     }
 
