@@ -25,6 +25,16 @@ namespace Tree.Classes
                 {
                     root = node;
                 }
+
+                if (root.LeftChild == null)
+                {
+                    root.LeftChild = node;
+                }
+
+                if (root.RightChild == null)
+                {
+                    root.RightChild = node;
+                }
             }
             catch(Exception error)
             {

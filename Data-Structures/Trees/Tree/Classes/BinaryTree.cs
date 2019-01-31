@@ -73,7 +73,7 @@ namespace Tree.Classes
         /// <summary>
         /// This method traverses through the tree by accessing the left child node first then accessing the right child before the root node.
         /// </summary>
-        /// <returns>An array of values in the tree</returns>
+        /// <returns>A list of values in the tree</returns>
         public List<int> PostOrder(Node root)
         {
             try
