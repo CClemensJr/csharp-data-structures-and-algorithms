@@ -18,6 +18,7 @@ namespace Tree.Classes
             try
             {
                 Node node = new Node();
+
                 node.Value = value;
 
                 if (root == null)

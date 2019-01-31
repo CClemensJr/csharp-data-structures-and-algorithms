@@ -10,9 +10,23 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the root node first then accessing the left child before the right child.
         /// </summary>
         /// <returns>An array of values in the tree</returns>
-        public int[] PreOrder()
+        public List<int> PreOrder(Node root)
         {
-            return null;
+            List<int> list = new List<int>();
+
+            list.Add(root.Value);
+
+            if (root.LeftChild != null)
+            {
+                PreOrder(root.LeftChild);
+            }
+
+            if (root.RightChild != null)
+            {
+                PreOrder(root.RightChild);
+            }
+            
+            return list;
         }
 
         /// <summary>
