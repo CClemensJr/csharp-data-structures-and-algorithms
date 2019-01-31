@@ -16,26 +16,27 @@ namespace Tree.Classes
         {
             try
             {
-                if (root.Value == value)
+
+                if (Convert.ToInt32(Root.Value) == value)
                 {
                     return true;
                 }
 
-                while (root.RightChild != null)
+                while (Root.RightChild != null)
                 {
-                    if (root.LeftChild.Value == value || root.RightChild.Value == value)
+                    if (Convert.ToInt32(Root.LeftChild.Value) == value || Convert.ToInt32(Root.RightChild.Value) == value)
                     {
                         return true;
                     }
 
-                    if (value < root.LeftChild.Value)
+                    if (value < Convert.ToInt32(Root.LeftChild.Value))
                     {
-                        root = root.LeftChild;
+                        Root = Root.LeftChild;
                     }
 
-                    if (value > root.RightChild.Value)
+                    if (value > Convert.ToInt32(Root.RightChild.Value))
                     {
-                        root = root.RightChild;
+                        Root = Root.RightChild;
                     }
                 }
             }

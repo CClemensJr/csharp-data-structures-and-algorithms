@@ -6,7 +6,7 @@ namespace Tree.Classes
 {
     public class Tree
     {
-        public Node root { get; set; }
+        public Node Root { get; set; }
 
         /// <summary>
         /// This method takes in a value and adds it to the tree. If the root node is null, the node is set to root. Subsequent nodes are added in a left to right fashion.
@@ -16,23 +16,19 @@ namespace Tree.Classes
         {
             try
             {
-                Node node = new Node();
-
-                node.Value = value;
-
-                if (root == null)
+                if (Root == null)
                 {
-                    root = node;
+                    Root = new Node(value);
                 }
 
-                if (root.LeftChild == null)
+                if (Root.LeftChild == null)
                 {
-                    root.LeftChild = node;
+                    Root.LeftChild = new Node(value);
                 }
 
-                if (root.RightChild == null)
+                if (Root.RightChild == null)
                 {
-                    root.RightChild = node;
+                    Root.RightChild = new Node(value);
                 }
             }
             catch (Exception error)

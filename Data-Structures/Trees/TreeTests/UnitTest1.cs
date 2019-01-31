@@ -45,9 +45,37 @@ namespace TreeTests
     public class TreeTests
     {
         [Fact]
-        public void Test1()
+        public void CanGetRootValue()
         {
+            Tree.Classes.Tree testTree = new Tree.Classes.Tree();
 
+            testTree.Add(7);
+
+            Assert.Equal(7, testTree.Root.Value);
+        }
+
+        [Fact]
+        public void CanSetRootValue()
+        {
+            Tree.Classes.Tree testTree = new Tree.Classes.Tree();
+
+            testTree.Add(9);
+
+            testTree.Root.Value = 7;
+
+            Assert.True(testTree.Root.Value == 7);
+        }
+
+        [Fact]
+        public void CanAddChildNodes()
+        {
+            Tree.Classes.Tree testTree = new Tree.Classes.Tree();
+
+            testTree.Add(9);
+            testTree.Add(7);
+            testTree.Add(10);
+
+            Assert.Equal(10, testTree.root.RightChild.Value);
         }
     }
 
