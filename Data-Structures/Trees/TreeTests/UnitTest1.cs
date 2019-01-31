@@ -38,7 +38,7 @@ namespace TreeTests
 
             testNode.Value = 89;
 
-            Assert.Equal(testValue, testNode.Value);
+            Assert.NotEqual(testValue, testNode.Value);
         }
     }
 
@@ -75,7 +75,7 @@ namespace TreeTests
             testTree.Add(7);
             testTree.Add(10);
 
-            Assert.Equal(10, testTree.Root.RightChild.Value);
+            Assert.Equal(10, testTree.Root..Value);
         }
     }
 
