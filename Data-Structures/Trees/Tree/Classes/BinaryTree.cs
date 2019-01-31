@@ -10,13 +10,13 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the root node first then accessing the left child before the right child.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
-        public List<int> PreOrder(Node root)
+        public List<object> PreOrder(Node root)
         {
             try
             {
-                List<int> list = new List<int>();
+                List<object> list = new List<object>();
 
-                list.Add(root.Value);
+                list.Add(Root.Value);
 
                 if (root.LeftChild != null)
                 {
@@ -42,11 +42,11 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the left child node first then accessing the root node before the right child.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
-        public List<int> InOrder(Node root)
+        public List<object> InOrder(Node root)
         {
             try
             {
-                List<int> list = new List<int>();
+                List<object> list = new List<object>();
 
                 if (root.LeftChild != null)
                 {
@@ -74,7 +74,7 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the left child node first then accessing the right child before the root node.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
-        public List<int> PostOrder(Node root)
+        public List<object> PostOrder(Node root)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace Tree.Classes
                     PreOrder(root.RightChild);
                 }
 
-                List<int> list = new List<int>();
+                List<object> list = new List<object>();
 
                 list.Add(root.Value);
 
