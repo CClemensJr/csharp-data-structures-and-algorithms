@@ -18,11 +18,22 @@ namespace Tree.Classes
             try
             {
                 Node node = new Node();
+
                 node.Value = value;
 
                 if (root == null)
                 {
                     root = node;
+                }
+
+                if (root.LeftChild == null)
+                {
+                    root.LeftChild = node;
+                }
+
+                if (root.RightChild == null)
+                {
+                    root.RightChild = node;
                 }
             }
             catch(Exception error)
@@ -38,7 +49,8 @@ namespace Tree.Classes
         /// <returns>True or false, depending on if the value is in the tree</returns>
         public bool Contains(int value)
         {
-            // Determine if value is in try at least once
+            // if ()
+
             return false;
         }
     }
