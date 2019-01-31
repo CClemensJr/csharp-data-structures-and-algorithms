@@ -7,7 +7,7 @@ namespace Tree.Classes
 {
     public class BinarySearchTree : Tree
     {
-        /// <summary>
+        /// <summary> 
         /// This method takes a value then traverses the tree returning true or false depending on if the value is in the tree
         /// </summary>
         /// <param name="value"></param>
