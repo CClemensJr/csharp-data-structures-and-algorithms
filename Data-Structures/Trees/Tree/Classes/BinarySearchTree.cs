@@ -49,7 +49,7 @@ namespace Tree.Classes
         /// <returns>True or false, depending on if the value is in the tree</returns>
         public bool Contains(int value)
         {
-            //if ()
+            // if ()
 
             return false;
         }
