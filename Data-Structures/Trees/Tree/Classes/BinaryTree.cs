@@ -74,8 +74,31 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the left child node first then accessing the right child before the root node.
         /// </summary>
         /// <returns>An array of values in the tree</returns>
-        public int[] PostOrder()
+        public List<int> PostOrder(Node root)
         {
+            try
+            {
+                if (root.LeftChild != null)
+                {
+                    PreOrder(root.LeftChild);
+                }
+
+                if (root.RightChild != null)
+                {
+                    PreOrder(root.RightChild);
+                }
+
+                List<int> list = new List<int>();
+
+                list.Add(root.Value);
+
+                return list;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine($"An error has occurred: { error.Message }");
+            }
+
             return null;
         }
     }
