@@ -49,7 +49,8 @@ namespace Tree.Classes
         /// <returns>True or false, depending on if the value is in the tree</returns>
         public bool Contains(int value)
         {
-            // Determine if value is in try at least once
+            //if ()
+
             return false;
         }
     }
