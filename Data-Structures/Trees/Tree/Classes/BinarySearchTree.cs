@@ -49,27 +49,34 @@ namespace Tree.Classes
         /// <returns>True or false, depending on if the value is in the tree</returns>
         public bool Contains(int value)
         {
-            if (root.Value == value)
+            try
             {
-                return true;
-            }
-
-            while (root.RightChild != null)
-            {
-                if (root.LeftChild.Value == value || root.RightChild.Value == value)
+                if (root.Value == value)
                 {
                     return true;
                 }
 
-                if (value < root.LeftChild.Value)
+                while (root.RightChild != null)
                 {
-                    root = root.LeftChild;
-                }
+                    if (root.LeftChild.Value == value || root.RightChild.Value == value)
+                    {
+                        return true;
+                    }
 
-                if (value > root.RightChild.Value)
-                {
-                    root = root.RightChild;
+                    if (value < root.LeftChild.Value)
+                    {
+                        root = root.LeftChild;
+                    }
+
+                    if (value > root.RightChild.Value)
+                    {
+                        root = root.RightChild;
+                    }
                 }
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine($"An error has occured: { error.Message }");
             }
 
             return false;
