@@ -75,7 +75,7 @@ namespace TreeTests
             testTree.Add(7);
             testTree.Add(10);
 
-            Assert.Equal(10, testTree.Root..Value);
+            Assert.Equal(7, testTree.Root.LeftChild.Value);
         }
     }
 
