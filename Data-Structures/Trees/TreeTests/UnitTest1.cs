@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using Tree.Classes;
+using System.Collections.Generic;
 
 namespace TreeTests
 {
@@ -94,7 +95,15 @@ namespace TreeTests
         [Fact]
         public void CanGetRoot()
         {
+            Node testNode1 = new Node(7);
+            Node testNode2 = new Node(77);
+            Node testNode3 = new Node(777);
 
+            BinaryTree tree = new BinaryTree();
+
+            List<object> list = tree.PreOrder(testNode1);
+
+            Assert.True(tree.PreOrder(testNode1));
         }
 
         [Fact]
