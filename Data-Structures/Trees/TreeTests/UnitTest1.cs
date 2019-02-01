@@ -96,20 +96,24 @@ namespace TreeTests
         public void CanGetRoot()
         {
             Node testNode1 = new Node(7);
-            Node testNode2 = new Node(77);
-            Node testNode3 = new Node(777);
 
-            BinaryTree tree = new BinaryTree();
+            BinaryTree tree = new BinaryTree(testNode1);
 
-            List<object> list = tree.PreOrder(testNode1);
-
-            Assert.True(tree.PreOrder(testNode1));
+            Assert.True(tree.Root == testNode1);
         }
 
         [Fact]
-        public void CanReturnList()
+        public void CanReturnListOfNodes()
         {
+            Node testNode1 = new Node(7);
 
+            BinaryTree tree = new BinaryTree(new Node(7));
+
+            tree.Add(77);
+
+            List<T> list = tree.PreOrder()
+
+            Assert.True();
         }
 
         [Fact]

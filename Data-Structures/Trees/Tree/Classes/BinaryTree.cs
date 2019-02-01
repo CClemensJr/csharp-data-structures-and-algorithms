@@ -7,6 +7,24 @@ namespace Tree.Classes
     public class BinaryTree : Tree
     {
         /// <summary>
+        /// A default constructor for binary tree
+        /// </summary>
+        public BinaryTree()
+        {
+
+        }
+
+
+        /// <summary>
+        /// This method sets the root node to the node argument if the object is created with a node
+        /// </summary>
+        /// <param name="node"></param>
+        public BinaryTree(Node node)
+        {
+            Root = node;
+        }
+
+        /// <summary>
         /// This method traverses through the tree by accessing the root node first then accessing the left child before the right child.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
