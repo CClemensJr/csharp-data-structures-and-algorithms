@@ -4,6 +4,9 @@ using Tree.Classes;
 
 namespace TreeTests
 {
+    /// <summary>
+    /// Node Class Tests
+    /// </summary>
     public class NodeTests
     {
         [Fact]
@@ -42,6 +45,9 @@ namespace TreeTests
         }
     }
 
+    /// <summary>
+    /// Tree class tests
+    /// </summary>
     public class TreeTests
     {
         [Fact]
@@ -79,15 +85,76 @@ namespace TreeTests
         }
     }
 
-    public class BinaryTreeTests
+
+    /// <summary>
+    /// BinaryTree class tests
+    /// </summary>
+    public class BinaryTreePreOrderTests
     {
         [Fact]
-        public void Test1()
+        public void CanGetRoot()
+        {
+
+        }
+
+        [Fact]
+        public void CanReturnList()
+        {
+
+        }
+
+        [Fact]
+        public void CanOutputRootFirst()
+        {
+
+        } 
+    }
+
+    public class BinaryTreeInOrderTests
+    {
+        [Fact]
+        public void CanGetRoot()
+        {
+
+        }
+
+        [Fact]
+        public void CanReturnList()
+        {
+
+        }
+
+        [Fact]
+        public void CanOutputRootFirst()
         {
 
         }
     }
 
+    public class BinaryTreePostOrderTests
+    {
+        [Fact]
+        public void CanGetRoot()
+        {
+
+        }
+
+        [Fact]
+        public void CanReturnList()
+        {
+
+        }
+
+        [Fact]
+        public void CanOutputRootFirst()
+        {
+
+        }
+    }
+
+    /// <summary>
+    /// BinarySearchTree class tests
+    /// </summary>
     public class BinarySearchTreeTests
     {
         [Fact]
