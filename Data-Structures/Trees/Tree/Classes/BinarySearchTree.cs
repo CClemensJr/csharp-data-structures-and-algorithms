@@ -26,24 +26,24 @@ namespace Tree.Classes
             try
             {
 
-                if (Convert.ToInt32(Root.Value) == value)
+                if (Root.Value == value)
                 {
                     return true;
                 }
 
                 while (Root.RightChild != null)
                 {
-                    if (Convert.ToInt32(Root.LeftChild.Value) == value || Convert.ToInt32(Root.RightChild.Value) == value)
+                    if (Root.LeftChild.Value == value || Root.RightChild.Value == value)
                     {
                         return true;
                     }
 
-                    if (value < Convert.ToInt32(Root.LeftChild.Value))
+                    if (value < Root.LeftChild.Value)
                     {
                         Root = Root.LeftChild;
                     }
 
-                    if (value > Convert.ToInt32(Root.RightChild.Value))
+                    if (value > Root.RightChild.Value)
                     {
                         Root = Root.RightChild;
                     }
