@@ -75,18 +75,14 @@ namespace Tree.Classes
 
                     if (value < Root.Value)
                     {
-                        Root = Root.LeftChild
+                        Root = Root.LeftChild;
                     }
-                        else
-                        {
-                            parentNode.RightChild = new Node(value);
-                        }
-                    }
-                    else if (Root.RightChild == null)
+                    else
                     {
-                        Root.RightChild = new Node(value);
+                        Root = Root.RightChild;
                     }
                 }
+
             }
             catch (Exception error)
             {
