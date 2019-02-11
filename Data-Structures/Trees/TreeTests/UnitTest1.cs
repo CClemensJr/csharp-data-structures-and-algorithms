@@ -111,15 +111,23 @@ namespace TreeTests
 
             tree.Add(77);
 
-            List<T> list = tree.PreOrder()
+            List<object> list = tree.PreOrder(testNode1);
 
-            Assert.True();
+            Assert.True(list.Count > 0);
         }
 
         [Fact]
         public void CanOutputRootFirst()
         {
+            Node testNode1 = new Node(7);
 
+            BinaryTree tree = new BinaryTree(new Node(7));
+
+            tree.Add(77);
+
+            List<object> list = tree.PreOrder(testNode1);
+
+            Assert.Equal(7, list[0]);
         } 
     }
 
