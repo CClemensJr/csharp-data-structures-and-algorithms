@@ -8,11 +8,15 @@ namespace Tree.Classes
     {
         public Node Root { get; set; }
 
-        public Tree()
-        {
-            
-        }
+        /// <summary>
+        /// This default contructor allows a tree object to be created without a root specified
+        /// </summary>
+        public Tree() {}
 
+        /// <summary>
+        /// This custom contructor create a tree object with the root node set to the Node passed into it.
+        /// </summary>
+        /// <param name="root"></param>
         public Tree(Node root)
         {
             Root = root;
