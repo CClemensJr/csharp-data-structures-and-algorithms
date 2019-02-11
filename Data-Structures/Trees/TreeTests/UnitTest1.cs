@@ -207,9 +207,11 @@ namespace TreeTests
     public class BinarySearchTreeTests
     {
         [Fact]
-        public void Test1()
+        public void CanGetRoot()
         {
+            BinarySearchTree tree = new BinarySearchTree(new Node(7));
 
+            Assert.Equal(7, tree.Root.Value);
         }
     }
 }
