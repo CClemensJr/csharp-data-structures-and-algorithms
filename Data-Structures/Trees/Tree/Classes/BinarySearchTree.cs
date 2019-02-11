@@ -37,13 +37,11 @@ namespace Tree.Classes
                     {
                         return true;
                     }
-
-                    if (value < Root.LeftChild.Value)
+                    else if (value < Root.Value)
                     {
                         Root = Root.LeftChild;
                     }
-
-                    if (value > Root.RightChild.Value)
+                    else if (value > Root.Value)
                     {
                         Root = Root.RightChild;
                     }
