@@ -111,7 +111,7 @@ namespace TreeTests
 
             tree.Add(77);
 
-            List<object> list = tree.PreOrder(testNode1);
+            List<int> list = tree.PreOrder(tree.Root);
 
             Assert.True(list.Count > 0);
         }
@@ -125,7 +125,7 @@ namespace TreeTests
 
             tree.Add(77);
 
-            List<object> list = tree.PreOrder(testNode1);
+            List<int> list = tree.PreOrder(tree.Root);
 
             Assert.Equal(7, list[0]);
         } 
@@ -136,19 +136,39 @@ namespace TreeTests
         [Fact]
         public void CanGetRoot()
         {
+            Node testNode1 = new Node(7);
 
+            BinaryTree tree = new BinaryTree(testNode1);
+
+            Assert.True(tree.Root == testNode1);
         }
 
         [Fact]
         public void CanReturnList()
         {
+            Node testNode1 = new Node(7);
 
+            BinaryTree tree = new BinaryTree(new Node(7));
+
+            tree.Add(77);
+
+            List<int> list = tree.InOrder(tree.Root);
+
+            Assert.True(list.Count > 1);
         }
 
         [Fact]
-        public void CanOutputRootFirst()
+        public void CanOutputRootSecond()
         {
+            Node testNode1 = new Node(7);
 
+            BinaryTree tree = new BinaryTree(new Node(7));
+
+            tree.Add(77);
+
+            List<int> list = tree.InOrder(tree.Root);
+
+            Assert.Equal(7, list[1]);
         }
     }
 
