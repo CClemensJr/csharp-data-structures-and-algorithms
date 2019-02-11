@@ -194,10 +194,11 @@ namespace TreeTests
             BinaryTree tree = new BinaryTree(new Node(7));
 
             tree.Add(77);
+            tree.Add(777);
 
-            List<int> list = tree.InOrder(tree.Root);
+            List<int> list = tree.PostOrder(tree.Root);
 
-            Assert.Equal(7, list[1]);
+            Assert.Equal(7, list[2]);
         }
     }
 
