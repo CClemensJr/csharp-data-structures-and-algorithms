@@ -105,22 +105,18 @@ namespace TreeTests
         [Fact]
         public void CanReturnListOfNodes()
         {
-            Node testNode1 = new Node(7);
-
             BinaryTree tree = new BinaryTree(new Node(7));
 
             tree.Add(77);
 
             List<int> list = tree.PreOrder(tree.Root);
 
-            Assert.True(list.Count > 0);
+            Assert.True(list.Count > 1);
         }
 
         [Fact]
         public void CanOutputRootFirst()
         {
-            Node testNode1 = new Node(7);
-
             BinaryTree tree = new BinaryTree(new Node(7));
 
             tree.Add(77);
@@ -146,8 +142,6 @@ namespace TreeTests
         [Fact]
         public void CanReturnList()
         {
-            Node testNode1 = new Node(7);
-
             BinaryTree tree = new BinaryTree(new Node(7));
 
             tree.Add(77);
@@ -160,8 +154,6 @@ namespace TreeTests
         [Fact]
         public void CanOutputRootSecond()
         {
-            Node testNode1 = new Node(7);
-
             BinaryTree tree = new BinaryTree(new Node(7));
 
             tree.Add(77);
