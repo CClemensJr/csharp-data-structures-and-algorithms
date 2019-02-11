@@ -213,5 +213,18 @@ namespace TreeTests
 
             Assert.Equal(7, tree.Root.Value);
         }
+
+        [Fact]
+        public void CanCheckIfTreeContainsValue()
+        {
+            BinarySearchTree tree = new BinarySearchTree(new Node(100));
+
+            tree.Add(50);
+            tree.Add(150);
+
+            bool inTree = tree.Contains(150);
+
+            Assert.True(inTree);
+        }
     }
 }
