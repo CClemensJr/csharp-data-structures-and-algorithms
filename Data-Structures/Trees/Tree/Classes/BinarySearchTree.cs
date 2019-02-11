@@ -7,6 +7,15 @@ namespace Tree.Classes
 {
     public class BinarySearchTree : Tree
     {
+        /// <summary>
+        /// When a BST object is created, it requires a root node be included
+        /// </summary>
+        /// <param name="root"></param>
+        public BinarySearchTree(Node root)
+        {
+            Root = root;
+        }
+
         /// <summary> 
         /// This method takes a value then traverses the tree returning true or false depending on if the value is in the tree
         /// </summary>
