@@ -6,12 +6,14 @@ namespace Tree.Classes
 {
     public class BinaryTree : Tree
     {
+        public List<int> BinaryTreeList = new List<int>();
+
         /// <summary>
         /// A default constructor for binary tree
         /// </summary>
         public BinaryTree()
         {
-
+            Root = null;
         }
 
 
@@ -28,13 +30,11 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the root node first then accessing the left child before the right child.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
-        public List<object> PreOrder(Node root)
+        public List<int> PreOrder(Node root)
         {
             try
             {
-                List<object> list = new List<object>();
-
-                list.Add(Root.Value);
+                BinaryTreeList.Add(Root.Value);
 
                 if (root.LeftChild != null)
                 {
@@ -46,7 +46,7 @@ namespace Tree.Classes
                     PreOrder(root.RightChild);
                 }
             
-                return list;
+                return BinaryTreeList;
             }
             catch (Exception error)
             {
@@ -60,25 +60,23 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the left child node first then accessing the root node before the right child.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
-        public List<object> InOrder(Node root)
+        public List<int> InOrder(Node root)
         {
             try
             {
-                List<object> list = new List<object>();
-
                 if (root.LeftChild != null)
                 {
                     PreOrder(root.LeftChild);
                 }
 
-                list.Add(root.Value);
+                BinaryTreeList.Add(root.Value);
 
                 if (root.RightChild != null)
                 {
                     PreOrder(root.RightChild);
                 }
 
-                return list;
+                return BinaryTreeList;
             }
             catch (Exception error)
             {
@@ -92,7 +90,7 @@ namespace Tree.Classes
         /// This method traverses through the tree by accessing the left child node first then accessing the right child before the root node.
         /// </summary>
         /// <returns>A list of values in the tree</returns>
-        public List<object> PostOrder(Node root)
+        public List<int> PostOrder(Node root)
         {
             try
             {
@@ -106,11 +104,9 @@ namespace Tree.Classes
                     PreOrder(root.RightChild);
                 }
 
-                List<object> list = new List<object>();
+                BinaryTreeList.Add(root.Value);
 
-                list.Add(root.Value);
-
-                return list;
+                return BinaryTreeList;
             }
             catch (Exception error)
             {
