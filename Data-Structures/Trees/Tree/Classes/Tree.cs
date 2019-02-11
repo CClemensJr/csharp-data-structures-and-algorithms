@@ -8,6 +8,16 @@ namespace Tree.Classes
     {
         public Node Root { get; set; }
 
+        public Tree()
+        {
+            
+        }
+
+        public Tree(Node root)
+        {
+            Root = root;
+        }
+
         /// <summary>
         /// This method takes in a value and adds it to the tree. If the root node is null, the node is set to root. Subsequent nodes are added in a left to right fashion.
         /// </summary>
