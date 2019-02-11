@@ -217,6 +217,12 @@ namespace TreeTests
         [Fact]
         public void CanAddNodesInSortedOrder()
         {
+            BinarySearchTree tree = new BinarySearchTree(new Node(100));
+
+            tree.Add(150);
+            tree.Add(50);
+
+            Assert.Equal(150, tree.Root.RightChild.Value);
 
         }
 
@@ -228,9 +234,7 @@ namespace TreeTests
             tree.Add(50);
             tree.Add(150);
 
-            bool inTree = tree.Contains(150);
-
-            Assert.True(inTree);
+            Assert.True(tree.Contains(150));
         }
 
     }

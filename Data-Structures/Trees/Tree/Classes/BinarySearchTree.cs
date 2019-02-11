@@ -17,44 +17,81 @@ namespace Tree.Classes
         }
 
 
-        public void Add(int value)
+        public override void Add(int value)
         {
-            //Queue<object> que = new Queue<object>();
-
-
-            //if (Root == null)
+            //try
             //{
-            //    Root = new Node(value);
-            //}
+                //    Queue<int> que = new Queue<int>();
 
-            //que.Enqueue(Root);
 
-            //Node front = new Node();
+                //    if (Root == null)
+                //    {
+                //        Root = new Node(value);
+                //    }
 
-            //while (que.Peek() != null)
-            //{
-            //    front.Value = que.Dequeue();
+                //    que.Enqueue(Root.Value);
 
-            //    if (front.LeftChild == null)
-            //    {
-            //        front.LeftChild = new Node(value);
-            //        que.Enqueue(front.LeftChild);
-            //    }
-            //    else if (front.LeftChild != null)
-            //    {
-            //        que.Enqueue(front.LeftChild);
-            //    }
+                //    Node front = new Node();
 
-            //    if (front.RightChild == null)
-            //    {
-            //        front.RightChild = new Node(value);
-            //        que.Enqueue(front.RightChild);
-            //    }
-            //    else if (front.RightChild != null)
-            //    {
-            //        que.Enqueue(front.RightChild);
-            //    }
-            //}
+                //    while (que.Count != 0 )
+                //    {
+                //        front.Value = que.Dequeue();
+
+                //        if (front.LeftChild == null)
+                //        {
+                //            front.LeftChild = new Node(value);
+                //            que.Enqueue(front.LeftChild.Value);
+                //        }
+                //        else if (front.LeftChild != null)
+                //        {
+                //            que.Enqueue(front.LeftChild.Value);
+                //        }
+
+                //        if (front.RightChild == null)
+                //        {
+                //            front.RightChild = new Node(value);
+                //            que.Enqueue(front.RightChild.Value);
+                //        }
+                //        else if (front.RightChild != null)
+                //        {
+                //            que.Enqueue(front.RightChild.Value);
+                //        }
+                //    }
+
+                //}
+
+            try
+            {
+                if (Root == null)
+                {
+                    Root = new Node(value);
+                }
+
+                Node parentNode = new Node();
+
+                while (parentNode != null)
+                {
+                    parentNode = Root;
+
+                    if (value < Root.Value)
+                    {
+                        Root = Root.LeftChild
+                    }
+                        else
+                        {
+                            parentNode.RightChild = new Node(value);
+                        }
+                    }
+                    else if (Root.RightChild == null)
+                    {
+                        Root.RightChild = new Node(value);
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine($"An error has occurred: { error.Message } ");
+            }
         }
 
         /// <summary> 
