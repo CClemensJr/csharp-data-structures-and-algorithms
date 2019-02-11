@@ -16,6 +16,47 @@ namespace Tree.Classes
             Root = root;
         }
 
+
+        public void Add(int value)
+        {
+            //Queue<object> que = new Queue<object>();
+
+
+            //if (Root == null)
+            //{
+            //    Root = new Node(value);
+            //}
+
+            //que.Enqueue(Root);
+
+            //Node front = new Node();
+
+            //while (que.Peek() != null)
+            //{
+            //    front.Value = que.Dequeue();
+
+            //    if (front.LeftChild == null)
+            //    {
+            //        front.LeftChild = new Node(value);
+            //        que.Enqueue(front.LeftChild);
+            //    }
+            //    else if (front.LeftChild != null)
+            //    {
+            //        que.Enqueue(front.LeftChild);
+            //    }
+
+            //    if (front.RightChild == null)
+            //    {
+            //        front.RightChild = new Node(value);
+            //        que.Enqueue(front.RightChild);
+            //    }
+            //    else if (front.RightChild != null)
+            //    {
+            //        que.Enqueue(front.RightChild);
+            //    }
+            //}
+        }
+
         /// <summary> 
         /// This method takes a value then traverses the tree returning true or false depending on if the value is in the tree
         /// </summary>
