@@ -68,14 +68,17 @@ namespace Tree.Classes
                 //}
 
                 if (Root == null)
+                {
                     Root = new Node(value);
-
-                if (Root.LeftChild == null)
+                }
+                else if (Root.LeftChild == null)
+                {
                     Root.LeftChild = new Node(value);
-
-                if (Root.RightChild == null)
+                }
+                else if (Root.RightChild == null)
+                {
                     Root.RightChild = new Node(value);
-
+                }
             }
             catch (Exception error)
             {
