@@ -30,43 +30,6 @@ namespace Tree.Classes
         {
             try
             {
-                //Queue<object> que = new Queue<object>();
-
-
-                //if (Root == null)
-                //{
-                //    Root = new Node(value);
-                //}
-
-                //que.Enqueue(Root);
-
-                //Node front = new Node();
-
-                //while (que.Peek() != null)
-                //{
-                //    front.Value = que.Dequeue();
-
-                //    if (front.LeftChild == null)
-                //    {
-                //        front.LeftChild = new Node(value);
-                //        que.Enqueue(front.LeftChild);
-                //    }
-                //    else if (front.LeftChild != null)
-                //    {
-                //        que.Enqueue(front.LeftChild);
-                //    }
-
-                //    if (front.RightChild == null)
-                //    {
-                //        front.RightChild = new Node(value);
-                //        que.Enqueue(front.RightChild);
-                //    }
-                //    else if (front.RightChild != null)
-                //    {
-                //        que.Enqueue(front.RightChild);
-                //    }
-                //}
-
                 if (Root == null)
                 {
                     Root = new Node(value);
