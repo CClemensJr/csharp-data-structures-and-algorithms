@@ -5,40 +5,54 @@ using Tree.Classes;
 
 namespace Tree.Classes
 {
-    public class BinarySearchTree
+    public class BinarySearchTree : Tree
     {
-        public Node root { get; set; }
-
         /// <summary>
-        /// This method takes in a value and adds it to the tree. If the root node is null, the node is set to root. Subsequent nodes are added in a left to right fashion.
+        /// When a BST object is created, it requires a root node be included
         /// </summary>
-        /// <param name="value"></param>
-        public void Add(int value)
+        /// <param name="root"></param>
+        public BinarySearchTree(Node root)
         {
-            try
-            {
-                Node node = new Node();
-                node.Value = value;
-
-                if (root == null)
-                {
-                    root = node;
-                }
-            }
-            catch(Exception error)
-            {
-                Console.WriteLine($"An error has occurred: { error.Message } ");
-            }
+            Root = root;
         }
 
-        /// <summary>
+
+        /// <summary> 
         /// This method takes a value then traverses the tree returning true or false depending on if the value is in the tree
         /// </summary>
         /// <param name="value"></param>
         /// <returns>True or false, depending on if the value is in the tree</returns>
         public bool Contains(int value)
         {
-            // Determine if value is in try at least once
+            try
+            {
+
+                if (Root.Value == value)
+                {
+                    return true;
+                }
+
+                while (Root.RightChild != null)
+                {
+                    if (Root.LeftChild.Value == value || Root.RightChild.Value == value)
+                    {
+                        return true;
+                    }
+                    else if (value < Root.Value)
+                    {
+                        Root = Root.LeftChild;
+                    }
+                    else if (value > Root.Value)
+                    {
+                        Root = Root.RightChild;
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine($"An error has occured: { error.Message }");
+            }
+
             return false;
         }
     }
