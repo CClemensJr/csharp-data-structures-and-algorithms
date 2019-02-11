@@ -76,13 +76,12 @@ namespace TreeTests
         [Fact]
         public void CanAddChildNodes()
         {
-            Tree.Classes.Tree testTree = new Tree.Classes.Tree();
+            Tree.Classes.Tree testTree = new Tree.Classes.Tree(new Node(7));
 
             testTree.Add(9);
-            testTree.Add(7);
             testTree.Add(10);
 
-            Assert.Equal(7, testTree.Root.LeftChild.Value);
+            Assert.Equal(9, testTree.Root.LeftChild.Value);
         }
     }
 
