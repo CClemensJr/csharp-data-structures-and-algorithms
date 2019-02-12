@@ -1,30 +1,26 @@
-# Find the Maximum Value In A Binary Tree
+# Determine If All Characters in a String are Unique
 
 ## Challenge
 ```
-	Write a function called find-maximum-value which takes binary tree as its only input.
-	Without utilizing any of the built-in methods available to your language, return the 
-	maximum value stored in the tree. You can assume that the values stored in the Binary 
-	Tree will be numeric.
+	Implement a method with the following signature bool AreCharactersUnique(string input)
+	that returns true if all the characters in the string are unique.
 ```
 
 ## Example
 |Input|Output|
 |-----|-------|
-| [(3), (5), (15)] | 15 |
-| [(3), (55), (19)]  | 55 |
+| string | true |
+| strings | false |
 
 
 ## Approach and Efficiency
 ```
-	For this problem I decided to use breadth first traversal to traver the tree level by 
-	level. The max value is initially set to 0 and is updated when a traversed node is
-	greater the current max value. The max value is returned after the entire tree has
-	been traversed.
+	For this problem I decided to nested for loops to compare each character in the string
+	to each other character in the string.
 
-	Big O: Time: O(n), Space: O(W), where W is the width of the tree.
+	Big O: Time: O(n^2), Space: O(1)
 ```
 
 ## Solution
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/findMaxValInBinaryTree1.JPG "Find Max Value in a Binary Tree Part 1")
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/findMaxValInBinaryTree2.JPG "Find Max Value In a Binary Tree Part 2")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/areCharactersUnique.JPG "Are Characters Unique")
+
