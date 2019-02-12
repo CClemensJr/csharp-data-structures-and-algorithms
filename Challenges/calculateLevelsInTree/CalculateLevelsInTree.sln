@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateLevelsInTree", "CalculateLevelsInTree\CalculateLevelsInTree.csproj", "{1C7C5CDD-CF61-473A-AC2A-199B68B125CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateLevelsInTreeTests", "CalculateLevelsInTreeTests\CalculateLevelsInTreeTests.csproj", "{D79AC114-1ED0-49D4-A9F0-9931DAFCDC6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1C7C5CDD-CF61-473A-AC2A-199B68B125CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C7C5CDD-CF61-473A-AC2A-199B68B125CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C7C5CDD-CF61-473A-AC2A-199B68B125CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79AC114-1ED0-49D4-A9F0-9931DAFCDC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79AC114-1ED0-49D4-A9F0-9931DAFCDC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79AC114-1ED0-49D4-A9F0-9931DAFCDC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79AC114-1ED0-49D4-A9F0-9931DAFCDC6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
