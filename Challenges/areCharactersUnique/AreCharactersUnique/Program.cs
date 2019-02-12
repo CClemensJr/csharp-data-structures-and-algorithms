@@ -6,7 +6,7 @@ namespace AreCharactersUnique
     {
         static void Main(string[] args)
         {
-            string word = "padre";
+            string word = "padra";
             bool isUnique = AreCharactersUnique(word);
 
             Console.WriteLine($"All characters in the word { word } are unique: { isUnique }");
@@ -20,8 +20,11 @@ namespace AreCharactersUnique
         {
             for (int i = 0; i < toBeChecked.Length; i++)
             {
-                for (int j = 1; j < toBeChecked.Length; j++)
+                Console.WriteLine($"{ toBeChecked } at i position {i} is { toBeChecked[i] }");
+
+                for (int j = i + 1; j < toBeChecked.Length; j++)
                 {
+                    Console.WriteLine($"{ toBeChecked } at j position {j} is { toBeChecked[j] }");
                     if (toBeChecked[i] == toBeChecked[j])
                     {
                         return false;
