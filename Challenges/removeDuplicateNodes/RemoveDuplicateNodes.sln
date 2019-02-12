@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDuplicateNodes", "RemoveDuplicateNodes\RemoveDuplicateNodes.csproj", "{C8783E08-E88F-4DFB-9021-4699C5D5C47D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDuplicateNodesTests", "RemoveDuplicateNodesTests\RemoveDuplicateNodesTests.csproj", "{F1B48A5F-FF2A-4A7A-AA68-B42BB8CF7FCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C8783E08-E88F-4DFB-9021-4699C5D5C47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8783E08-E88F-4DFB-9021-4699C5D5C47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8783E08-E88F-4DFB-9021-4699C5D5C47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B48A5F-FF2A-4A7A-AA68-B42BB8CF7FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B48A5F-FF2A-4A7A-AA68-B42BB8CF7FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B48A5F-FF2A-4A7A-AA68-B42BB8CF7FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B48A5F-FF2A-4A7A-AA68-B42BB8CF7FCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
