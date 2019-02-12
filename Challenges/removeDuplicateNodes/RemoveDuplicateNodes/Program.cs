@@ -13,6 +13,8 @@ namespace RemoveDuplicateNodes
 
     public LList RemoveDuplicateNodes(LList list)
     {
+        list.Current = list.Head;
 
+        return list;
     }
 }
