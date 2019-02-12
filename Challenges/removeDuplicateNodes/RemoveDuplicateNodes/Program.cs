@@ -9,22 +9,40 @@ namespace RemoveDuplicateNodes
         {
             Console.WriteLine("Hello World!");
         }
-    }
 
-    public LList RemoveDuplicateNodes(LList list)
-    {
-        list.Current = list.Head;
 
-        while(list.Current != null)
+        /// <summary>
+        /// This method takes a list, iterates over the list, removes duplicate nodes, and then returns the updated list
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns>An updated LinkedList</returns>
+        public static LList RemoveDuplicateNodes(LList list)
         {
-            Node currentNode = list.Current;
+            list.Current = list.Head;
 
-            while (currentNode.Next != null)
+            while(list.Current != null)
             {
+                Node currentNode = list.Current;
 
+                while (currentNode.Next != null)
+                {
+                    if (currentNode.Next == list.Current)
+                    {
+                        currentNode = currentNode.Next;
+                        currentNode.Next = currentNode;
+                        currentNode = currentNode.Next;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.Next;
+                    }
+                }
+
+                list.Current = list.Current.Next;
             }
-        }
 
-        return list;
+            return list;
+        }
     }
+
 }
