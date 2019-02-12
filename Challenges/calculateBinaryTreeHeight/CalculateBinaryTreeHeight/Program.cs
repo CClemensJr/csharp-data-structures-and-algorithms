@@ -14,7 +14,17 @@ namespace CalculateBinaryTreeHeight
         public static int CalculateBinaryTreeHeight(Node root)
         {
             Queue queue = new Queue();
-            return 0;
+
+            int height = 0;
+
+            queue.Enqueue(root);
+
+            while(queue.Count > 0)
+            {
+
+            }
+
+            return height;
         }
     }
 }
