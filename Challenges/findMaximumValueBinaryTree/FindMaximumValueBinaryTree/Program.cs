@@ -6,12 +6,13 @@ namespace FindMaximumValueBinaryTree
     {
         static void Main(string[] args)
         {
-            FindMaxValue();
+
+            int maxValue = FindMaxValue();
         }
 
-        public static void FindMaxValue()
+        public static int FindMaxValue()
         {
-
+            return 0;
         }
     }
 }
