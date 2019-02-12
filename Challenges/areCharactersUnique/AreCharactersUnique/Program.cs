@@ -20,11 +20,8 @@ namespace AreCharactersUnique
         {
             for (int i = 0; i < toBeChecked.Length; i++)
             {
-                Console.WriteLine($"{ toBeChecked } at i position {i} is { toBeChecked[i] }");
-
                 for (int j = i + 1; j < toBeChecked.Length; j++)
                 {
-                    Console.WriteLine($"{ toBeChecked } at j position {j} is { toBeChecked[j] }");
                     if (toBeChecked[i] == toBeChecked[j])
                     {
                         return false;
