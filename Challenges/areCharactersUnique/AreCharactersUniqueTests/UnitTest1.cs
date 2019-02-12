@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using AreCharactersUnique;
 
 namespace AreCharactersUniqueTests
 {
@@ -8,7 +9,11 @@ namespace AreCharactersUniqueTests
         [Fact]
         public void CanReturnTrueWhenInputHasUniqueCharacters()
         {
+            string word = "speak";
 
+            bool isUnique = Program.AreAllCharactersUnique(word);
+
+            Assert.True(isUnique);
         }
 
         [Fact]

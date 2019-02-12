@@ -2,12 +2,12 @@
 
 namespace AreCharactersUnique
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string word = "padra";
-            bool isUnique = AreCharactersUnique(word);
+            bool isUnique = AreAllCharactersUnique(word);
 
             Console.WriteLine($"All characters in the word { word } are unique: { isUnique }");
 
@@ -21,7 +21,7 @@ namespace AreCharactersUnique
         /// </summary>
         /// <param name="toBeChecked"></param>
         /// <returns>A boolean based on if all characters are unique</returns>
-        public static bool AreCharactersUnique(string toBeChecked)
+        public static bool AreAllCharactersUnique(string toBeChecked)
         {
             for (int i = 0; i < toBeChecked.Length; i++)
             {
