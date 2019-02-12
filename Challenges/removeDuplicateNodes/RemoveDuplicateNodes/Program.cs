@@ -1,4 +1,5 @@
 ﻿using System;
+using LinkedList.Classes;
 
 namespace RemoveDuplicateNodes
 {
@@ -10,5 +11,8 @@ namespace RemoveDuplicateNodes
         }
     }
 
+    public LList RemoveDuplicateNodes(LList list)
+    {
 
+    }
 }
