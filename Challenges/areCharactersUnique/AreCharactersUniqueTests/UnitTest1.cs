@@ -19,13 +19,21 @@ namespace AreCharactersUniqueTests
         [Fact]
         public void CanReturnFalseWhenInputDoesNotHaveUniqueCharacters()
         {
+            string word = "speakers";
 
+            bool isUnique = Program.AreAllCharactersUnique(word);
+
+            Assert.False(isUnique);
         }
 
         [Fact]
-        public void CanReturnFalseWhenInputDoesNotAnyCharacters()
+        public void CanReturnFalseWhenInputStringIsEmpty()
         {
+            string word = "";
 
+            bool isUnique = Program.AreAllCharactersUnique(word);
+
+            Assert.False(isUnique);
         }
     }
 }

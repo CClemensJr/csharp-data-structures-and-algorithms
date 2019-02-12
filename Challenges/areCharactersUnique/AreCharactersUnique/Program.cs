@@ -23,18 +23,35 @@ namespace AreCharactersUnique
         /// <returns>A boolean based on if all characters are unique</returns>
         public static bool AreAllCharactersUnique(string toBeChecked)
         {
-            for (int i = 0; i < toBeChecked.Length; i++)
+            try
             {
-                for (int j = i + 1; j < toBeChecked.Length; j++)
+                if ( toBeChecked == "")
                 {
-                    if (toBeChecked[i] == toBeChecked[j])
+                    return false;
+                }
+
+                for (int i = 0; i < toBeChecked.Length; i++)
+                {
+                    for (int j = i + 1; j < toBeChecked.Length; j++)
                     {
-                        return false;
+                        if (toBeChecked[i] == toBeChecked[j])
+                        {
+                            return false;
+                        }
                     }
                 }
+
+                return true;
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine($"An error has occurred: { error.Message }");
+
+                Console.Write("Press enter to continue...");
+                Console.ReadLine();
             }
 
-            return true;
+            return false;
         }
     }
 }
