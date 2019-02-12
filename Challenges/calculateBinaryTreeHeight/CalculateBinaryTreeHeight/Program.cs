@@ -8,5 +8,10 @@ namespace CalculateBinaryTreeHeight
         {
             Console.WriteLine("Hello World!");
         }
+
+        public static int CalculateBinaryTreeHeight(Node root)
+        {
+            return 0;
+        }
     }
 }
