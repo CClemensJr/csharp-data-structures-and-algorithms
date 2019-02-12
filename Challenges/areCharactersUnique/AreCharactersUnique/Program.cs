@@ -16,6 +16,11 @@ namespace AreCharactersUnique
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// This method takes a string, iterates over each character and checks it against the rest of the string to test for uniqueness.
+        /// </summary>
+        /// <param name="toBeChecked"></param>
+        /// <returns>A boolean based on if all characters are unique</returns>
         public static bool AreCharactersUnique(string toBeChecked)
         {
             for (int i = 0; i < toBeChecked.Length; i++)
