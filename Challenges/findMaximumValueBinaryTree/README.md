@@ -7,13 +7,11 @@
 	maximum value stored in the tree. You can assume that the values stored in the Binary 
 	Tree will be numeric.
 ```
-
 ## Example
 |Input|Output|
 |-----|-------|
 | [(3), (5), (15)] | 15 |
 | [(3), (55), (19)]  | 55 |
-
 
 ## Approach and Efficiency
 ```
