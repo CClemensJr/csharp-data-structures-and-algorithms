@@ -5,25 +5,25 @@ using Tree.Classes;
 
 namespace CalculateBinaryTreeHeight
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
 
-        public static int CalculateBinaryTreeHeight(Node root)
+        public static int CalculateBinaryTreesHeight(Node root)
         {
             Queue<Node> queue = new Queue<Node>();
+            Node parentNode = root;
 
             int height = 0;
 
             queue.Enqueue(root);
 
-            while(queue.Count > 0)
-            {
-                Node parentNode = queue.Peek();
 
+            while (queue.Count > 0)
+            {
                 if (parentNode.LeftChild != null)
                 {
                     queue.Enqueue(parentNode.LeftChild);
@@ -40,6 +40,8 @@ namespace CalculateBinaryTreeHeight
                 queue.Dequeue();
 
                 height++;
+
+                parentNode = queue.Peek();
             }
 
             return height;
