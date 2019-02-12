@@ -15,9 +15,11 @@ namespace RemoveDuplicateNodes
     {
         list.Current = list.Head;
 
-        while( list.Current != null)
+        while(list.Current != null)
         {
+            Node node = list.Current;
 
+            
         }
 
         return list;
