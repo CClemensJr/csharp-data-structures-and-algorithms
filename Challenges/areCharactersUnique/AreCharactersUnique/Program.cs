@@ -11,6 +11,10 @@ namespace AreCharactersUnique
 
         public static bool AreCharactersUnique(string toBeChecked)
         {
+            for (int i = 0; i < toBeChecked.Length; i++)
+            {
+
+            }
 
             return true;
         }
