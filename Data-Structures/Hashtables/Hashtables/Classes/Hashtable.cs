@@ -36,5 +36,16 @@ namespace Hashtables.Classes
         {
             return false;
         }
+
+        /// <summary>
+        /// This method takes in a key and returns an index in the collection
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns>An integer index in the collection</returns>
+        public int Hash(string key)
+        {
+
+            return 0;
+        }
     }
 }
