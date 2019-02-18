@@ -1,13 +1,13 @@
-# Trees
-< one of the most common data structures for sifting through data.
+# Hashtables
+> one of the most common data structures for sifting through data.
 
 ## Challenge
 ```
-	Implement
+	Implement a Hashtable.
 ```
 
 ## Approach and Efficiency
-### Binary Tree
+### To Be Added
 ```
 	A binary tree is unordered so to find a value the whole tree may need to be searched.
 	Recursion is used to go traverse through the tree. This results in:
@@ -16,33 +16,15 @@
 	Space: O(H), where H is the height of the tree
 ```
 
-### Binary Search Tree
-```
-	A binary search tree is always ordered and can use a while loop to traverse through
-	the tree. This results in 
-
-	Time: O(log n)
-	Space: O(1)
-```
-
 ## API
-### Binary Tree
-```
-	Within the Binary Tree implementation I created 3 methods: PreOrder, InOrder, and PostOrder. 
+### add
+> takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
 
-	PreOrder takes a value then returns an array of the nodes, always checking the root node first.
+### get 
+> takes in the key and returns the value from the table.
 
-	InOrder takes a value then returns an array of the nodes, always checking the root node second.
+### contains
+> takes in the key and returns a boolean, indicating if the key exists in the table already.
 
-	PostOrder takes a value then returns an array of the nodes, always checking the root node third.
-
-```
-### Binary Search Tree
-```
-	Within the Binary Search Tree implementation I created 2 methods: Add and Contains;
-
-	Add takes a value and attaches a new node with that value to the tree.
-
-	Contains takes a value and traverses through the tree, returning true or false based
-	on if it is in the tree.
-```
+### hash
+> takes in an arbitrary key and returns an index in the collection.
