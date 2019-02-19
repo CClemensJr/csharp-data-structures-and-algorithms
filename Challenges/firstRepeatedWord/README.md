@@ -1,26 +1,22 @@
-# Find the Maximum Value In A Binary Tree
+# Find the First Repeated Word
 
 ## Challenge
 ```
-	Write a function called find-maximum-value which takes binary tree as its only input.
-	Without utilizing any of the built-in methods available to your language, return the 
-	maximum value stored in the tree. You can assume that the values stored in the Binary 
-	Tree will be numeric.
+	Write a method that accepts a lengthy string parameter and returns the first word 
+	to occur more than once in that provided string.
 ```
 ## Example
 |Input|Output|
 |-----|-------|
-| [(3), (5), (15)] | 15 |
-| [(3), (55), (19)]  | 55 |
+| "Once upon a time, there was a brave princess who..." | a |
+| "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."  | summer |
 
 ## Approach and Efficiency
 ```
-	For this problem I decided to use breadth first traversal to traver the tree level by 
-	level. The max value is initially set to 0 and is updated when a traversed node is
-	greater the current max value. The max value is returned after the entire tree has
-	been traversed.
+	For this problem I decided to use a hash table. I iterated through the string and assigned 
+	each word to an element in the hashtable. When a duplicate occurs, it is return.
 
-	Big O: Time: O(n), Space: O(W), where W is the width of the tree.
+	Big O: Search: Time: O(1), Space: O(n).
 ```
 
 ## Solution
