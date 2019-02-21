@@ -1,8 +1,8 @@
-# Tree Intersection
+# Left-Join
 
 ## Challenge
 ```
-	Find the common values in 2 binary trees.
+	Implement a simplified LEFT JOIN for 2 Hashmaps.
 ```
 
 ## Example
