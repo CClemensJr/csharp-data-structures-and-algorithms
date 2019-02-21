@@ -6,7 +6,15 @@ namespace LeftJoinHashmaps
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LeftJoin();
+
+            Console.Write("Press any key to exit...");
+            Console.ReadLine();
+        }
+
+        public static void LeftJoin()
+        {
+            Console.WriteLine("In LeftJoin");
         }
     }
 }
