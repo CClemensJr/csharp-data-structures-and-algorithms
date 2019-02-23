@@ -35,27 +35,23 @@ namespace InsertionSorts
         /// <returns>A sorted array</returns>
         public static int[] InsertionSort(int[] unsortedArray)
         {
-            //int[] sortedArray = unsortedArray;
-            // create value var to store value being inspected
             int value = 0;
-            // create hole var to store position in array
             int position = 0;
 
-            // loop from array[1] to array[n - 1] where n is the length
+
             for (int i = 1; i < (unsortedArray.Length - 1); i++)
             {
-                // set value <- array[i]
                 value = unsortedArray[i];
-                // set hole <- i
                 position = i;
-                // while hole > 0 && array[hole - 1] > value
+
                 while (position > 0 && unsortedArray[position - 1] > value)
                 {
-                    // array[hole] <- array[hole - 1]
-                    // hole = hole - 1
-                }
-                // array[hole] <- value
+                    unsortedArray[position] = unsortedArray[position - 1];
 
+                    position -= 1;
+                }
+
+                unsortedArray[position] = value;
             }
 
             return unsortedArray;
