@@ -54,7 +54,7 @@ namespace Hashtables.Classes
                 index += (int)key[i];
             }
 
-            index %= 7;
+            index %= 10;
 
             return index;
         }
