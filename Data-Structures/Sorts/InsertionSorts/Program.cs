@@ -14,11 +14,14 @@ namespace InsertionSorts
             for (int i = 0; i < unsortedArray.Length; i++)
             {
                 unsortedArray[i] = RandomNumber(min, max);
-
-                Console.WriteLine(unsortedArray[i]);
             }
 
             int[] sortedArray = InsertionSort(unsortedArray);
+
+            foreach (int num in sortedArray)
+            {
+                Console.Write(num + " | ");
+            }
 
             Console.Write("Press any key to continue...");
             Console.ReadLine();
@@ -30,9 +33,28 @@ namespace InsertionSorts
         /// </summary>
         /// <param name="array"></param>
         /// <returns>A sorted array</returns>
-        public static int[] InsertionSort(int[] array)
+        public static int[] InsertionSort(int[] unsortedArray)
         {
-            int[] sortedArray = array;
+            //int[] sortedArray = unsortedArray;
+            // create value var to store value being inspected
+            int value = 0;
+            // create hole var to store position in array
+            int position = 0;
+
+            // loop from array[1] to array[n - 1] where n is the length
+            for (int i = 1; i < (unsortedArray.Length - 1); i++)
+            {
+                // set value <- array[i]
+                value = unsortedArray[i];
+                // set hole <- i
+                position = i;
+                // while hole > 0 && array[hole - 1] > value
+                while (position > 0 && )
+                    // array[hole] <- array[hole - 1]
+                    // hole = hole - 1
+                // array[hole] <- value
+
+            }
 
             return sortedArray;
         }
