@@ -39,7 +39,7 @@ namespace InsertionSorts
             int position = 0;
 
 
-            for (int i = 1; i < (unsortedArray.Length - 1); i++)
+            for (int i = 1; i < unsortedArray.Length; i++)
             {
                 value = unsortedArray[i];
                 position = i;
