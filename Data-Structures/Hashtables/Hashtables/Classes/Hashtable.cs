@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LinkedList.Classes;
 
 namespace Hashtables.Classes
 {
     public class Hashtable
     {
-
         public List<object> hashTable { get; set; }
 
         /// <summary>
@@ -47,8 +47,16 @@ namespace Hashtables.Classes
         /// <returns>An integer index in the collection</returns>
         public int Hash(string key)
         {
+            int index = 0;
 
-            return 0;
+            for (int i = 0; i < key.Length; i++)
+            {
+                index += (int)key[i];
+            }
+
+            index %= 7;
+
+            return index;
         }
     }
 }
