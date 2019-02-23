@@ -11,8 +11,8 @@ namespace InsertionSortsTests
         public void CanSortArray()
         {
             int min = 1;
-            int max = 100;
-            int size = 10;
+            int max = 50;
+            int size = 5;
             int[] unsortedArray = new int[size];
 
             for (int i = 0; i < unsortedArray.Length; i++)
@@ -26,6 +26,15 @@ namespace InsertionSortsTests
         }
 
         // A sorted array returns the same sorted array
+        [Fact]
+        public void CanReturnPreviouslySortedArrays()
+        {
+            int[] array = { 10, 15, 25, 50, 51 };
+
+            int[] sortedArray = Program.InsertionSort(array);
+
+            Assert.True(sortedArray == array);
+        }
 
         // A backwards-sorted array returns the array sorted
 
