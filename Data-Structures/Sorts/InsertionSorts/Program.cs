@@ -14,8 +14,11 @@ namespace InsertionSorts
             for (int i = 0; i < unsortedArray.Length; i++)
             {
                 unsortedArray[i] = RandomNumber(min, max);
+
+                Console.WriteLine(unsortedArray[i]);
             }
 
+            int[] sortedArray = InsertionSort(unsortedArray);
 
             Console.Write("Press any key to continue...");
             Console.ReadLine();
@@ -27,9 +30,9 @@ namespace InsertionSorts
         /// </summary>
         /// <param name="array"></param>
         /// <returns>A sorted array</returns>
-        public static Array InsertionSort(Array array)
+        public static int[] InsertionSort(int[] array)
         {
-            Array sortedArray = array;
+            int[] sortedArray = array;
 
             return sortedArray;
         }
