@@ -37,8 +37,26 @@ namespace InsertionSortsTests
         }
 
         // A backwards-sorted array returns the array sorted
+        [Fact]
+        public void CanSortBackWardsSortedArray()
+        {
+            int[] array = { 51, 50, 25, 15, 10 };
+
+            int[] sortedArray = Program.InsertionSort(array);
+
+            Assert.True(sortedArray == array);
+        }
 
         // An empty array returns the same empty array
+        [Fact]
+        public void CanReturnEmptyArray()
+        {
+            int[] array = new int[0];
+
+            int[] sortedArray = Program.InsertionSort(array);
+
+            Assert.True(sortedArray == array);
+        }
 
         // An array of one element returns the same single-element array
     }
