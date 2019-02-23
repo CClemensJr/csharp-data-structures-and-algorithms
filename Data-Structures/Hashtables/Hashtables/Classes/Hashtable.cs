@@ -6,6 +6,7 @@ namespace Hashtables.Classes
 {
     public class Hashtable
     {
+
         public List<object> hashTable { get; set; }
 
         /// <summary>
