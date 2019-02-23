@@ -59,5 +59,14 @@ namespace InsertionSortsTests
         }
 
         // An array of one element returns the same single-element array
+        [Fact]
+        public void CanReturnSingleElementArray()
+        {
+            int[] array = { 51 };
+
+            int[] sortedArray = Program.InsertionSort(array);
+
+            Assert.True(sortedArray == array);
+        }
     }
 }
