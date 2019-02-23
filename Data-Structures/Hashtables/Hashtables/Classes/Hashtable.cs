@@ -6,8 +6,10 @@ namespace Hashtables.Classes
 {
     public class Hashtable
     {
+        public List<object> hashTable { get; set; }
+
         /// <summary>
-        /// This method should hash the key then add the key and the value to the table, handling collisions as needed.
+        /// This method hashes the key then adds the key and the value to the table, handling collisions as needed.
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
