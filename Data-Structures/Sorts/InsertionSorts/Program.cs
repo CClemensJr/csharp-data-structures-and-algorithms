@@ -49,14 +49,16 @@ namespace InsertionSorts
                 // set hole <- i
                 position = i;
                 // while hole > 0 && array[hole - 1] > value
-                //while (position > 0 && )
+                while (position > 0 && unsortedArray[position - 1] > value)
+                {
                     // array[hole] <- array[hole - 1]
                     // hole = hole - 1
+                }
                 // array[hole] <- value
 
             }
 
-            return sortedArray;
+            return unsortedArray;
         }
 
 
