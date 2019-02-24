@@ -10,7 +10,10 @@ namespace Hashtables.Classes
         public int Size { get; set; }
         public object[] Table { get; set; }
 
-
+        /// <summary>
+        /// This custom constructor creates an array of objects based on the size provided
+        /// </summary>
+        /// <param name="size"></param>
         public Hashtable(int size)
         {
             Size = size;
