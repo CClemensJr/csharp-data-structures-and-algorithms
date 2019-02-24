@@ -76,7 +76,9 @@ namespace Hashtables.Classes
                 index += (int)key[i];
             }
 
-            index %= 10;
+            index *= 599;
+
+            index /= Table.Length;
 
             return index;
         }
