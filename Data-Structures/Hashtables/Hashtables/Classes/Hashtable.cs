@@ -7,7 +7,8 @@ namespace Hashtables.Classes
 {
     public class Hashtable
     {
-        public List<object> hashTable { get; set; }
+        public int Size { get; set; }
+        public List<object> HashTable { get; set; }
 
         /// <summary>
         /// This method hashes the key then adds the key and the value to the table, handling collisions as needed.
@@ -16,7 +17,11 @@ namespace Hashtables.Classes
         /// <param name="value"></param>
         public void Add(string key, Object value)
         {
+            int index = Hash(key);
 
+            HashTable[index] = value;
+
+            Size++;
         }
 
 
