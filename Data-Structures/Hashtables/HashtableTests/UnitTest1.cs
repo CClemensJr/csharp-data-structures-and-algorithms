@@ -17,9 +17,7 @@ namespace HashtableTests
 
             hashtable.Add(key, value);
 
-            int hashedKey = hashtable.Hash(key);
-
-            Assert.True(Convert.ToInt32(hashtable.Table[hashedKey]) == value);
+            Assert.True(hashtable.Contains(key));
         }
 
         // Retrieving based on a key returns the value stored
