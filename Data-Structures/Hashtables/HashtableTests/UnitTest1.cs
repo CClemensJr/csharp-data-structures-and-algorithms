@@ -46,6 +46,20 @@ namespace HashtableTests
         }
 
         // Successfully handles a collision within the hashtable
+        [Fact]
+        public void CanHandleCollision()
+        {
+            string key = "static";
+            int value1 = 35;
+            int value2 = 55;
+
+            Hashtable hashtable = new Hashtable(10);
+
+            hashtable.Add(key, value1);
+            hashtable.Add(key, value2);
+
+            Assert.Equal(value1, Convert.ToInt32(hashtable.Get(key)));
+        }
 
         // Successfully retrieve a value from a bucket within the hashtable that has a collision
 
