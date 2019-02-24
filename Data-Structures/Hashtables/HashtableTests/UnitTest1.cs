@@ -35,6 +35,15 @@ namespace HashtableTests
         }
 
         // Successfully returns null for a key that does not exist in hashtable
+        [Fact]
+        public void CanReturnNullIfNoKey()
+        {
+            string key = "static";
+
+            Hashtable hashtable = new Hashtable(10);
+
+            Assert.Null(hashtable.Get(key));
+        }
 
         // Successfully handles a collision within the hashtable
 
