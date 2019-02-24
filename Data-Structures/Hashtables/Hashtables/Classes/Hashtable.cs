@@ -25,7 +25,6 @@ namespace Hashtables.Classes
         public void Add(string key, Object value)
         {
             int index = Hash(key);
-            Hashtable hashtable = new Hashtable(index + 1);
 
             Table[index] = value;
         }
@@ -38,6 +37,8 @@ namespace Hashtables.Classes
         /// <returns>The value associated with the key</returns>
         public Object Get(string key)
         {
+            int index = Hash(key);
+
             return null;
         }
 
