@@ -49,6 +49,13 @@ namespace Hashtables.Classes
         /// <returns>True or false</returns>
         public bool Contains(string key)
         {
+            int index = Hash(key);
+
+            for (int i = 0; i < Table.Length; i++)
+            {
+                if (index == i) return true;
+            }
+
             return false;
         }
 
