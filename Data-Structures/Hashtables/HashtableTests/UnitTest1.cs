@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Hashtables.Classes;
 
 namespace HashtableTests
 {
@@ -9,7 +10,16 @@ namespace HashtableTests
         [Fact]
         public void CanAddToHashtable()
         {
+            string key = "static";
+            int value = 35;
 
+            Hashtable hashtable = new Hashtable(10);
+
+            hashtable.Add(key, value);
+
+            int hashedKey = hashtable.Hash(key);
+
+            Assert.True(Convert.ToInt32(hashtable.Table[hashedKey]) == value);
         }
 
         // Retrieving based on a key returns the value stored
