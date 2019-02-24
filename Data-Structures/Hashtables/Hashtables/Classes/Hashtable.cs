@@ -28,8 +28,12 @@ namespace Hashtables.Classes
         public void Add(string key, object value)
         {
             int index = Hash(key);
+            Bucket bucket = new Bucket(key, value);
 
-            Table[index] = value;
+            if (Table[index] == null)
+            {
+                Table[index] = bucket;
+            }
         }
 
 
