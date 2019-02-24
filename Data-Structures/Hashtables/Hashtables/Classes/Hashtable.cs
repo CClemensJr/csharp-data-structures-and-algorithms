@@ -35,11 +35,11 @@ namespace Hashtables.Classes
         /// </summary>
         /// <param name="key"></param>
         /// <returns>The value associated with the key</returns>
-        public Object Get(string key)
+        public object Get(string key)
         {
             int index = Hash(key);
 
-            return null;
+            return Table[index];
         }
 
         /// <summary>
