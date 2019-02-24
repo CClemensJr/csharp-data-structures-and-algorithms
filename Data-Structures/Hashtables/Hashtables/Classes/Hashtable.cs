@@ -25,7 +25,7 @@ namespace Hashtables.Classes
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        public void Add(string key, Object value)
+        public void Add(string key, object value)
         {
             int index = Hash(key);
 
