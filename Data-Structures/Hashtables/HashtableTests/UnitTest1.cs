@@ -23,6 +23,18 @@ namespace HashtableTests
         }
 
         // Retrieving based on a key returns the value stored
+        [Fact]
+        public void CanRetrieveValueFromHashtable()
+        {
+            string key = "static";
+            int value = 35;
+
+            Hashtable hashtable = new Hashtable(10);
+
+            hashtable.Add(key, value);
+
+            Assert.Equal(value, Convert.ToInt32(hashtable.Get(key)));
+        }
 
         // Successfully returns null for a key that does not exist in hashtable
 
