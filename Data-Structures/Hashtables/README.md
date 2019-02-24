@@ -7,13 +7,12 @@
 ```
 
 ## Approach and Efficiency
-### To Be Added
 ```
-	A binary tree is unordered so to find a value the whole tree may need to be searched.
-	Recursion is used to go traverse through the tree. This results in:
+	For this datastructure I decided to use an array of nodes as my hashtable. 
+	When collision occurs, a the data is added by placing the node in a linked list at that element.
 
-	Time: O(N)
-	Space: O(H), where H is the height of the tree
+	Time: O(1) if no list at the element, O(n) if there is
+	Space: O(n)
 ```
 
 ## API
