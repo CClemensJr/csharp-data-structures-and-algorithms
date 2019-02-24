@@ -8,6 +8,9 @@ namespace Hashtables.Classes
     {
         public string Key { get; set; }
         public object Value { get; set; }
+        public Node Next { get; set; }
+
+        public Node() { }
 
         /// <summary>
         /// This custome constructor allows key and value to be set upon instantiation
@@ -18,6 +21,7 @@ namespace Hashtables.Classes
         {
             Key = key;
             Value = value;
+            Next = new Node();
         }
     }
 }
