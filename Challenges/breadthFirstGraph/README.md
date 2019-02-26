@@ -1,28 +1,22 @@
-# Tree Intersection
+# Breadth-First Traversal of a Graph
 
 ## Challenge
-```
-	Find the common values in 2 binary trees.
-```
+> Implement a breadth-first traversal on a graph.
 
 ## Example
-### To be updated
 |Input|Output|
 |-----|-------|
-| string | true |
-| strings | false |
-
+| 1 | [1, 2, 3, 4, 5] |
 
 ## Approach and Efficiency
-### To be updated
 ```
-	For this problem I decided to nested for loops to compare each character in the string
-	to each other character in the string.
+	For this problem I decided to use a while loop over the entire graph 
+	with a nested for loop to compare the children of each node.
 
-	Big O: Time: O(n^2), Space: O(1)
+	Big O: Time: O(n^2), Space: O(w)
 ```
 
 ## Solution
 ### To be updated
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/areCharactersUnique.JPG "Are Characters Unique")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversalOfGraph.JPG "Breadth first traversal of graph")
 
