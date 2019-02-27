@@ -1,12 +1,17 @@
-# Breadth-First Traversal of a Graph
+# Get Edges
 
 ## Challenge
-> Implement a breadth-first traversal on a graph.
+> Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? 
+  If so, how much will the total trip cost be?
+  
+> Write a method which takes in a graph and an array of city names. 
+  Without utilizing any of the built-in methods available to your language, 
+  return whether the full trip is possible with direct flights, and how much it would cost.
 
 ## Example
 |Input|Output|
 |-----|-------|
-| 1 | [1, 2, 3, 4, 5] |
+| (Seattle)-$150-(Spokane) | (true, $150) |
 
 ## Approach and Efficiency
 ```
@@ -17,6 +22,5 @@
 ```
 
 ## Solution
-### To be updated
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversalOfGraph.JPG "Breadth first traversal of graph")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversalOfGraph.JPG "Get edges")
 
