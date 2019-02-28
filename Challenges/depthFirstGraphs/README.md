@@ -1,22 +1,16 @@
-# Breadth-First Traversal of a Graph
+# Depth-First Traversal of a Graph
+> Conduct a depth first preorder traversal on a graph
 
 ## Challenge
-> Implement a breadth-first traversal on a graph.
-
-## Example
-|Input|Output|
-|-----|-------|
-| 1 | [1, 2, 3, 4, 5] |
+> Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Return a collection of nodes in their pre-order depth-first traversal order.
 
 ## Approach and Efficiency
 ```
-	For this problem I decided to use a while loop over the entire graph 
-	with a nested for loop to compare the children of each node.
+	For this problem I decided to use recursion traverse over the entire graph. 
 
-	Big O: Time: O(n^2), Space: O(w)
+	Big O: Time: O(n), Space: O(h)
 ```
 
 ## Solution
-### To be updated
-![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversalOfGraph.JPG "Breadth first traversal of graph")
+![alt text](https://github.com/CClemensJr/data-structures-and-algorithms/blob/master/assets/breadthFirstTraversalOfGraph.JPG "Depth first traversal of graph")
 
